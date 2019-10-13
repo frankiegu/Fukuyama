@@ -1,35 +1,21 @@
 <template>
     <div id="app">
-        <div id="nav">
-            <router-link to="/">Home</router-link>
-            |
-            <router-link to="/about">About</router-link>
-        </div>
-        <router-view/>
+        <!--        这里封装了 页面和 底边 tabbar-->
+        <router-view></router-view>
+        <tabbar></tabbar>
     </div>
 </template>
 
-<style>
-    @import '~normalize.css/normalize.css';
+<script>
+    import tabbar from 'components/common/tabbar/B_Tabbar'
 
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
+    export default {
+        name: "app",
+        components: {
+            tabbar,
+        },
     }
+</script>
 
-    #nav {
-        padding: 30px;
-    }
-
-    #nav a {
-        font-weight: bold;
-        color: #2c3e50;
-    }
-
-    #nav a.router-link-exact-active {
-        color: #42b983;
-    }
+<style scoped>
 </style>

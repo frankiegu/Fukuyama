@@ -1,7 +1,6 @@
 module.exports = {
     configureWebpack: {
         resolve: {
-
             alias: {
                 'assets': '@/assets',
                 'views': '@/views',
@@ -11,5 +10,8 @@ module.exports = {
 
             } // 别名配置
         }
+    },
+    chainWebpack: config=>{
+
     }
 }
