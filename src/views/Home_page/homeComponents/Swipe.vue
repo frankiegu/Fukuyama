@@ -19,16 +19,14 @@
         data() {
             return {
                 images: [
-                    require("../../../assets/logo.png"),
-                    require("../../../assets/icon1.png"),
-                    // 'https://img.yzcdn.cn/vant/apple-1.jpg',
-                    // 'https://img.yzcdn.cn/vant/apple-2.jpg'
+                    require("../../../assets/braces-img/indoor1.jpg"),
+                    require("../../../assets/braces-img/indoor-special1.jpg"),
+                    require("../../../assets/braces-img/indoor2.jpg"),
+                    require("../../../assets/braces-img/indoor3.jpg"),
                 ]
             }
         },
         created() {
-            console.log(require("assets/logo.png"));
-            console.log(this.images);
         }
     }
 </script>
