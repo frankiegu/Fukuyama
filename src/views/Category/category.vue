@@ -1,8 +1,8 @@
 <template>
     <div>
         <NavBar></NavBar>
-<!--        <h1>分类111</h1>-->
-        <ul>
+        <!--        <h1>分类111</h1>-->
+        <ul class="wrapper">
             <li>分类列表1</li>
             <li>分类列表2</li>
             <li>分类列表3</li>
@@ -114,6 +114,11 @@
         name: "category",
         components: {
             NavBar
+        },
+        mounted() {
+            let wrapper = document.querySelector('.wrapper')
+            let scroll = new BScroll(wrapper)
+
         }
     }
 </script>
