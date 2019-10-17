@@ -8,6 +8,7 @@
                     left-arrow
                     @click-left="onClickLeft"
                     @click-right="onClickRight"
+                    :fixed="true"
             />
         </div>
 
@@ -19,6 +20,7 @@
                     left-arrow
                     @click-left="onClickLeft"
                     @click-right="onClickRight"
+                    :fixed="true"
             />
         </div>
     </div>

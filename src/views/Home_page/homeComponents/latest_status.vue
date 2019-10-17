@@ -28,6 +28,12 @@
                     require("../../../assets/braces-img/indoor1.jpg"),
                     require("../../../assets/braces-img/out-smile.jpg"),
                     require("../../../assets/braces-img/out-sitting.jpg"),
+                    require("../../../assets/braces-img/out-sitting.jpg"),
+                    require("../../../assets/braces-img/out-sitting.jpg"),
+                    require("../../../assets/braces-img/out-sitting.jpg"),
+                    require("../../../assets/braces-img/out-sitting.jpg"),
+                    require("../../../assets/braces-img/out-sitting.jpg"),
+                    require("../../../assets/braces-img/out-sitting.jpg"),
                 ],
             }
         }

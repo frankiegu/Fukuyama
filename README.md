@@ -27,3 +27,19 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# Project contains：↓
+
+登录，注册 视频下方评论 第三方登录
+
+视频排序 按赞
+
+收藏视频
+
+进度条
+
+骨架屏
+
+
+
+如果可以 记录播放位置
