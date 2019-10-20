@@ -42,4 +42,18 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
+3.媒体库：
+
+navbar 带 logo （可选） 搜索 v-if显示
+
+最近
+
+收藏
+
+历史记录稍后观看
+
+赞过的视频
+
+
+
 如果可以 记录播放位置

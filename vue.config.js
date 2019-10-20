@@ -11,7 +11,4 @@ module.exports = {
             } // 别名配置
         }
     },
-    chainWebpack: config=>{
-
-    }
 }

@@ -34,6 +34,6 @@
 
     .layer {
         padding-bottom: 50px;
-        padding-top: 46px   ;
+        /*padding-top: 46px   ;*/
     }
 </style>

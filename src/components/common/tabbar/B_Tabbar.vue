@@ -18,9 +18,9 @@
             <van-tabbar-item
                     push
                     to="/mine"
-                    icon="manager"
+                    icon="video"
             >
-                我的
+                媒体库
             </van-tabbar-item>
         </van-tabbar>
     </div>

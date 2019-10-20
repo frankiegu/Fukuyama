@@ -1,10 +1,16 @@
 <template>
-    <h1>Mine</h1>
+    <div>
+<Tab></Tab>
+    </div>
 </template>
 
 <script>
+    import Tab from 'views/Mine/mine_components/tab/Tab'
     export default {
-        name: "mine"
+        name: "mine",
+        components:{
+            Tab
+        }
     }
 </script>
 
