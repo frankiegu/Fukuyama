@@ -7,6 +7,7 @@ const Homepage = () => import('../views/Home_page/Home_page.vue')
 const category = () => import('../views/Category/category.vue')
 const cart = () => import('../views/Cart/cart.vue')
 const mine = () => import('../views/Mine/mine.vue')
+const login = () => import('../views/login/Login.vue')
 
 export default new Router({
     mode: 'history',
@@ -39,5 +40,10 @@ export default new Router({
             name: 'mine',
             component: mine,
         },
+        {
+            path: '/login',
+            name: 'login',
+            component: login,
+        }
     ]
 })
