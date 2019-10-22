@@ -24,6 +24,7 @@
 </template>
 
 <script>
+
     import {request} from "../../network/request";
 
 
@@ -45,32 +46,38 @@
                     data: {
                         'username': this.username,
                         'pwd': this.pwd,
+                        addr: ''
                     },
 
-                }).then(res => {
+                })
+                    .then(res => {
+                        console.log(res);
+                        this.addr = res.data.avatar;
+                        this.merge();
 
-                    this.toast({
-                        message: '登陆成功',
-                        duration: 1500,
+
                     })
+                    .catch(err => {
+                        console.log(err);
+                        // console.log(err.headers['set-cookie'])
+                    });
+            },
 
-                    setTimeout(fun => {
-                        this.$router.push("/home");
-                    }, 1500)
-                    console.log(res);
-
-                }).catch(err => {
-                    console.log(err);
-                    // console.log(err.headers['set-cookie'])
+            merge() {
+                console.log(this.addr);
+                this.$store.commit("change_avatar");
+                this.toast({
+                    message: '登陆成功',
+                    duration: 1500,
                 });
+
+                setTimeout(fun => {
+                    this.$router.push("/home");
+                }, 1500)
             }
-        },
-        created() {
 
         },
-        mounted() {
 
-        }
     }
 </script>
 

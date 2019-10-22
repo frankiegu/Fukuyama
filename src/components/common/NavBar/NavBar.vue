@@ -15,8 +15,10 @@
 
             <!--                <van-col span="6" offset="12">-->
             <!--                <div>-->
+<!--            :src="this.$store.state.avatar"-->
+
             <van-image
-                    :src="avatar"
+                    :src="this.$store.state.avatar"
                     width="35"
                     height="35"
                     radius="5px"
@@ -42,17 +44,12 @@
         name: "NavBar"
         , data() {
             return {
-                avatar: this.$store.state.avatar
+                // avatar: this.$store.state.avatar
             }
         },
         methods: {
-            onClickLeft() {
-                console.log(this.$route.path);
-            },
-            onClickRight() {
-                Toast('按钮');
-            }
-        }
+
+        },
     }
 </script>
 
