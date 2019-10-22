@@ -16,7 +16,7 @@
             <!--                <van-col span="6" offset="12">-->
             <!--                <div>-->
             <van-image
-                    src="https://img.yzcdn.cn/vant/cat.jpeg"
+                    :src="avatar"
                     width="35"
                     height="35"
                     radius="5px"
@@ -41,7 +41,9 @@
     export default {
         name: "NavBar"
         , data() {
-            return {}
+            return {
+                avatar: this.$store.state.avatar
+            }
         },
         methods: {
             onClickLeft() {

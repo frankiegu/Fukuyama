@@ -2,9 +2,9 @@
     <div>
         <van-cell-group>
             <van-field
-                    v-model="email"
-                    label="邮箱"
-                    placeholder="请输入邮箱"
+                    v-model="username"
+                    label="用户名"
+                    placeholder="请输入用户名"
 
             ></van-field>
             <van-field
@@ -16,40 +16,60 @@
             <br>
             <van-row type="flex" justify="center">
                 <van-col span="20">
-                    <van-button size="large" color="#B22222">登录</van-button>
+                    <van-button size="large" color="#B22222" @click="click_login()">登录</van-button>
                 </van-col>
             </van-row>
         </van-cell-group>
-
-        <!--        测试展示数据-->
-        <p>{{name}}</p>
-        <p>{{email}}</p>
     </div>
 </template>
 
 <script>
     import {request} from "../../network/request";
 
+
     export default {
         name: "Login",
-        data(){
-            return{
+        data() {
+            return {
                 email: '',
-                pwd:'',
-                name: '11',
+                username: 'yyy',
+                pwd: 'ttt',
+                toast: this.$toast
+            }
+        },
+        methods: {
+            click_login() {
+                request({
+                    method: 'post',
+                    url: '/login/yyy',
+                    data: {
+                        'username': this.username,
+                        'pwd': this.pwd,
+                    },
 
+                }).then(res => {
+
+                    this.toast({
+                        message: '登陆成功',
+                        duration: 1500,
+                    })
+
+                    setTimeout(fun => {
+                        this.$router.push("/home");
+                    }, 1500)
+                    console.log(res);
+
+                }).catch(err => {
+                    console.log(err);
+                    // console.log(err.headers['set-cookie'])
+                });
             }
         },
         created() {
-            request({
-                method: 'get',
-                // url: 'https://unidemo.dcloud.net.cn/api/news',
-                url: 'http://localhost:8000/login/yyy'
-            }).then(res=>{
-                console.log(res.data);
-            }).catch(err=>{
-                console.log(err);
-            })
+
+        },
+        mounted() {
+
         }
     }
 </script>
