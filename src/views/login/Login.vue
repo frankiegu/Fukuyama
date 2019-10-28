@@ -33,8 +33,8 @@
         data() {
             return {
                 email: '',
-                username: 'yyy',
-                pwd: 'ttt',
+                username: 'aaa',
+                pwd: '1',
                 toast: this.$toast
             }
         },
@@ -42,30 +42,25 @@
             click_login() {
                 request({
                     method: 'post',
-                    url: '/login/yyy',
+                    url: 'login',
                     data: {
                         'username': this.username,
-                        'pwd': this.pwd,
+                        'password': this.pwd,
                         addr: ''
                     },
 
                 })
                     .then(res => {
-                        console.log(res);
-                        this.addr = res.data.avatar;
-                        this.merge();
-
-
+                        console.log(res.data);
+                        this.$store.commit('toggle_login');
+                        this.merge()    // 登陆成功跳转
                     })
                     .catch(err => {
                         console.log(err);
-                        // console.log(err.headers['set-cookie'])
                     });
             },
 
             merge() {
-                console.log(this.addr);
-                this.$store.commit("change_avatar");
                 this.toast({
                     message: '登陆成功',
                     duration: 1500,

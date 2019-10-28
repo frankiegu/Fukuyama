@@ -8,7 +8,7 @@ const category = () => import('../views/Category/category.vue')
 const cart = () => import('../views/Cart/cart.vue')
 const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')
-
+const register = () => import('../views/register/Register.vue')
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
@@ -44,6 +44,10 @@ export default new Router({
             path: '/login',
             name: 'login',
             component: login,
+        },
+        {
+            path: '/register',
+            component: register,
         }
     ]
 })

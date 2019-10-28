@@ -14,8 +14,10 @@
             const dp = new DPlayer({
                 container: document.getElementById('dplayer'),
                 screenshot: true,
+                method: 'get',
                 video: {
                     url: "https://media.w3.org/2010/05/sintel/trailer.mp4",
+                    // url: "http://localhost:8000/api/auth/video",
                     pic: require("../../../assets/logo.png"),
                     thumbnails: require("../../../assets/logo.png"),
                 },

@@ -15,17 +15,18 @@
 
             <!--                <van-col span="6" offset="12">-->
             <!--                <div>-->
-<!--            :src="this.$store.state.avatar"-->
+            <!--            :src="this.$store.state.avatar"-->
 
-            <van-image
-                    :src="this.$store.state.avatar"
-                    width="35"
-                    height="35"
-                    radius="5px"
-                    style="float: right;"
+            <van-image v-if="this.$store.state.login_state == true"
+                       :src="this.$store.state.avatar"
+                       width="35"
+                       height="35"
+                       radius="5px"
+                       style="float: right;"
 
             />
-            <van-icon name="user-circle-o" size="28"/>
+            <van-icon name="user-circle-o" size="28" @click="to_login()"
+                      v-if="this.$store.state.login_state ==false"/>
             <van-icon name="search" size="28"/>
 
             <!--                </div>-->
@@ -48,7 +49,9 @@
             }
         },
         methods: {
-
+            to_login() {
+                this.$router.push("/login")
+            }
         },
     }
 </script>

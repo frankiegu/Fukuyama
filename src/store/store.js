@@ -6,11 +6,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         logo_addr: require("assets/youtobe.jpg"),
-        avatar: null,
+        avatar: "https://img.yzcdn.cn/vant/cat.jpeg",
+        login_state: false
     },
     mutations: {
-        change_avatar(state) {
-            state.avatar = require("assets/dzs.jpg")
+        toggle_login(state) {
+            state.login_state = true
         }
     },
     actions: {}

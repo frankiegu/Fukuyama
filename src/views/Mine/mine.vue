@@ -1,15 +1,16 @@
 <template>
     <div>
-<Tab></Tab>
+        <TableCell></TableCell>
     </div>
 </template>
 
 <script>
-    import Tab from 'views/Mine/mine_components/tab/Tab'
+    import TableCell from 'views/Mine/mine_components/tableCell/TableCell'
+
     export default {
         name: "mine",
-        components:{
-            Tab
+        components: {
+            TableCell
         }
     }
 </script>
