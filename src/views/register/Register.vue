@@ -17,17 +17,26 @@
                     v-model="phone"
                     label="手机号"
                     placeholder=""
-                    :error-message="phone_err"
+
                     @blur="err_tip"
             />
             <van-field
-                    left-icon="envelop-o"
-                    v-model="email"
-                    label="邮箱"
-                    placeholder=""
-                    :error-message="phone_err"
-                    @blur="err_tip"
-            />
+                    v-model="sms"
+                    center
+                    clearable
+                    label="短信验证码"
+                    placeholder="请输入短信验证码"
+            >
+                <van-button slot="button" size="small" color="red">发送验证码</van-button>
+            </van-field>
+<!--            <van-field-->
+<!--                    left-icon="envelop-o"-->
+<!--                    v-model="email"-->
+<!--                    label="邮箱"-->
+<!--                    placeholder=""-->
+
+<!--                    @blur="err_tip"-->
+<!--            />-->
         </van-cell-group>
         <br>
         <van-row type="flex" justify="center">
