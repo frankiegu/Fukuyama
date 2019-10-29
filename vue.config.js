@@ -1,5 +1,5 @@
 module.exports = {
-    baseUrl: '/',
+    baseUrl: 'http://localhost:80/',
     configureWebpack: {
         resolve: {
             alias: {
