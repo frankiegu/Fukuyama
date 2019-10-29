@@ -23,4 +23,7 @@
 </script>
 
 <style scoped>
+    /*#app{*/
+    /*    background-image: url("assets/Bing黄毛果蝠.jpg");*/
+    /*}*/
 </style>

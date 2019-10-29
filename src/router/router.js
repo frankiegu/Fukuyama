@@ -9,7 +9,12 @@ const cart = () => import('../views/Cart/cart.vue')
 const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')
 const register = () => import('../views/register/Register.vue')
-export default new Router({
+
+const MetaInfo = {
+    title: "Youtuba"
+}
+const router = new Router({
+
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
@@ -51,3 +56,16 @@ export default new Router({
         }
     ]
 })
+
+
+router.beforeEach((to, from, next) => {//beforeEach是router的钩子函数，在进入路由前执行
+    if (to.meta.title) {//判断是否有标题
+        document.title = to.meta.title
+    } else {
+        document.title = MetaInfo.title
+    }
+    next()//执行进入路由，如果不写就不会进入目标页
+})
+
+export default router
+

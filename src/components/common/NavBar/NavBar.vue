@@ -42,11 +42,16 @@
 
 <script>
     export default {
-        name: "NavBar"
-        , data() {
+        name: "NavBar",
+        data() {
             return {
                 // avatar: this.$store.state.avatar
             }
+        },
+        created() {
+            this.$store.state.login_state = true;
+            // console.log(window.localStorage.setItem('token', 'token!!!!!!'));
+
         },
         methods: {
             to_login() {
