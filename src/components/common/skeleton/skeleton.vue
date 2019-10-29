@@ -1,11 +1,9 @@
 <template>
-    <keep-alive>
         <div class="bottom layer">
             <slot></slot>
             <slot></slot>
             <slot></slot>
         </div>
-    </keep-alive>
 
 </template>
 
