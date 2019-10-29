@@ -10,7 +10,7 @@
     export default {
         name: "mine",
         components: {
-            TableCell
+            TableCell,
         }
     }
 </script>

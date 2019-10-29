@@ -1,20 +1,19 @@
 <template>
-    <div>
-        <Scroll>
-            <swipe></swipe>
-            <recommendbar></recommendbar>
-            <statusbar></statusbar>
-            <h1>11</h1>
-        </Scroll>
-    </div>
+    <skeleton>
+        <!--        轮播图-->
+        <swipe></swipe>
+        <!--        推荐宫格-->
+        <recommendbar></recommendbar>
+        <!--        贴照片-->
+        <statusbar></statusbar>
+    </skeleton>
 </template>
 
 <script>
-    import NavBar from "components/common/NavBar/NavBar";
     import swipe from 'views/Home_page/homeComponents/Swipe'
     import recommendbar from 'views/Home_page/homeComponents/Recommendbar'
     import statusbar from 'views/Home_page/homeComponents/latest_status'
-    import Scroll from "components/common/scroll/Scroll";
+    import skeleton from "../../components/common/skeleton/skeleton";
 
     export default {
         name: "Home_page",
@@ -45,8 +44,8 @@
         components: {
             swipe
             , recommendbar
-            , statusbar,
-            Scroll
+            , statusbar
+            , skeleton
         }
     }
 </script>

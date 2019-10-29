@@ -15,45 +15,49 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # Project contains：↓
 
-登录，注册 视频下方评论 第三方登录
+- [x] 登录，
+- [ ] 注册
+- [ ]  视频下方评论
+- [ ]  第三方登录
 
-视频排序 按赞
+- [ ]  按赞
 
-收藏视频
 
-进度条
+- [ ] 收藏视频
 
-骨架屏
+- [ ] 进度条
+
+
+- [ ] 骨架屏
+- [ ] 过渡动画
 
 
 
 3.媒体库：
 
-navbar 带 logo （可选） 搜索 v-if显示
-
-最近
-
-收藏
-
-历史记录稍后观看
-
-赞过的视频
+- [ ] navbar 带 logo （可选） 搜索 v-if显示
 
 
+- [ ] 最近
 
-如果可以 记录播放位置
+
+- [ ] 收藏
+
+
+- [ ] 历史记录稍后观看
+
+
+- [ ] 赞过的视频
+
+
+
+
+- [ ] 如果可以 记录播放位置
+
+- [ ] Transition Vue 过渡效果
+- [ ] Nginx 部署 提供静态资源

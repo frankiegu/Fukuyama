@@ -1,6 +1,6 @@
 <template>
     <div>
-        <van-tabbar route>
+        <van-tabbar route active-color="#FF0000">
             <van-tabbar-item
                     replace
                     to="/home"
