@@ -59,5 +59,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - [ ] 如果可以 记录播放位置
 
-- [ ] Transition Vue 过渡效果
+- [x] Transition Vue 过渡效果
 - [ ] Nginx 部署 提供静态资源

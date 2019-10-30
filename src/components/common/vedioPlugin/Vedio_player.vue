@@ -1,5 +1,7 @@
 <template>
-    <div id="dplayer"></div>
+    <div>
+        <div id="dplayer"></div>
+    </div>
 </template>
 
 <script>
@@ -16,10 +18,10 @@
                 screenshot: true,
                 method: 'get',
                 video: {
-                    url: "https://media.w3.org/2010/05/sintel/trailer.mp4",
-                    // url: "http://localhost:8000/api/auth/video",
-                    pic: require("../../../assets/logo.png"),
-                    thumbnails: require("../../../assets/logo.png"),
+                    // url: "http://localhost:8080/static/ttt.avi",
+                    // url: require("/static/周杰伦 - 东风破.flac"),
+                    pic: require("assets/logo.png"),
+                    thumbnails: require("assets/logo.png"),
                 },
                 subtitle: {
                     url: 'webvtt.vtt',
