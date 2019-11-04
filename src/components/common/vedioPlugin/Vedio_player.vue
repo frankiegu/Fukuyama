@@ -18,7 +18,7 @@
                 screenshot: true,
                 method: 'get',
                 video: {
-                    // url: "http://localhost:8080/static/ttt.avi",
+                    url: "http://122.51.25.188/trailer.mp4",
                     // url: require("/static/周杰伦 - 东风破.flac"),
                     pic: require("assets/logo.png"),
                     thumbnails: require("assets/logo.png"),
@@ -26,10 +26,10 @@
                 subtitle: {
                     url: 'webvtt.vtt',
                 },
-                danmaku: {
-                    id: 'demo',
-                    api: 'https://api.prprpr.me/dplayer/',
-                },
+                // danmaku: {
+                //     id: 'demo',
+                //     api: 'https://api.prprpr.me/dplayer/',
+                // },
             });
         },
         computed: {},

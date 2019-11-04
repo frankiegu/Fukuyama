@@ -33,8 +33,8 @@
         data() {
             return {
                 email: '',
-                username: 'aaa',
-                pwd: '1',
+                username: '',
+                pwd: '',
                 toast: this.$toast
             }
         },
@@ -46,7 +46,6 @@
                     data: {
                         'username': this.username,
                         'password': this.pwd,
-                        addr: ''
                     },
 
                 })

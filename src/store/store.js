@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        logo_addr: require("assets/youtobe.jpg"),   // logo地址 // Nginx -_-
+        logo_addr: "https://bwijn-1259543998.cos.ap-shanghai.myqcloud.com/LOGO/timg.jpg",   // logo地址 // Nginx -_-
         avatar: "https://img.yzcdn.cn/vant/cat.jpeg",   // 用户头像地址 Nginx
         login_state: false,      // 登录状态
         search_show: false,
