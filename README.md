@@ -21,11 +21,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 # Project contains：↓
 
 - [x] 登录，
-- [ ] 注册
-- [ ]  视频下方评论
-- [ ]  第三方登录
-
-- [ ]  按赞
+- [x] 注册
+- [ ] 电话/邮箱 验证注册
+- [ ] 视频下方评论
+- [ ] 第三方登录
+- [ ] 按赞
 
 
 - [ ] 收藏视频
@@ -60,4 +60,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - [ ] 如果可以 记录播放位置
 
 - [x] Transition Vue 过渡效果
-- [ ] Nginx 部署 提供静态资源
+- [x] Nginx 部署 提供静态资源
