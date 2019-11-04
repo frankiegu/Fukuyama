@@ -6,7 +6,7 @@
             </van-col>
         </van-row>
 
-        <van-grid :column-num="2">
+        <van-grid :column-num="1">
             <van-grid-item
                     v-for="(item, index) in images" :key="index"
             >

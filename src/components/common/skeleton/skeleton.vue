@@ -1,8 +1,6 @@
 <template>
         <div class="bottom layer">
             <slot></slot>
-            <slot></slot>
-            <slot></slot>
         </div>
 
 </template>

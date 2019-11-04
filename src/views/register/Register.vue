@@ -12,31 +12,30 @@
                     label="密码"
                     left-icon="eye-o"
             />
+<!--            <van-field-->
+<!--                    left-icon="phone-o"-->
+<!--                    v-model="phone"-->
+<!--                    label="手机号"-->
+<!--                    placeholder=""-->
+
+<!--                    @blur="err_tip"-->
+<!--            />-->
+<!--            <van-field-->
+<!--                    v-model="sms"-->
+<!--                    center-->
+<!--                    clearable-->
+<!--                    label="短信验证码"-->
+<!--                    placeholder="请输入短信验证码"-->
+<!--            >-->
+<!--                <van-button slot="button" size="small" color="red">发送验证码</van-button>-->
+<!--            </van-field>-->
             <van-field
-                    left-icon="phone-o"
-                    v-model="phone"
-                    label="手机号"
+                    left-icon="envelop-o"
+                    v-model="email"
+                    label="邮箱"
                     placeholder=""
-
-                    @blur="err_tip"
+            @blur="err_tip"
             />
-            <van-field
-                    v-model="sms"
-                    center
-                    clearable
-                    label="短信验证码"
-                    placeholder="请输入短信验证码"
-            >
-                <van-button slot="button" size="small" color="red">发送验证码</van-button>
-            </van-field>
-            <!--            <van-field-->
-            <!--                    left-icon="envelop-o"-->
-            <!--                    v-model="email"-->
-            <!--                    label="邮箱"-->
-            <!--                    placeholder=""-->
-
-            <!--                    @blur="err_tip"-->
-            <!--            />-->
         </van-cell-group>
         <br>
         <van-row type="flex" justify="center">

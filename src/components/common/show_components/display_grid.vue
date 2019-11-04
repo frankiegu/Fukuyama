@@ -1,23 +1,15 @@
 <template>
     <div>
-        <van-grid :column-num="2">
-            <van-grid-item v-for="value in imageList"
-                           :key="value"
-                           @click="pathto">
-                <van-image :src="value"/>
+        <van-grid :column-num="1">
+            <van-grid-item
+                    v-for="value in imageList"
+                    :key="value"
+                    @click="pathto">
+                <van-image :src="value" radius="5" fit="cover" height="33vh" width="100vm"/>
 
-                <van-row style="">
-                    <van-col span="24" style="margin-top: 5px;font-weight:lighter; font-size: 14px; color: hotpink">
-                        <van-icon name="video"/>
-                        1.8W
-
-                        <van-icon name="comment"/>
-                        55
-                    </van-col>
-
-                    <van-col span="24" style="font-size: 14px">我是标题 - - -</van-col>
-
-                </van-row>
+                <van-cell :border="false" title="我是标题" value="内容" label="作者·观看次数·时间">
+                    <author_avatar style="margin-right: 10px;" slot="icon"></author_avatar>
+                </van-cell>
 
             </van-grid-item>
 
@@ -28,6 +20,7 @@
 </template>
 
 <script>
+    import author_avatar from "./author_avatar";
 
     export default {
         data() {
@@ -43,7 +36,9 @@
                 this.$router.push("/cart")
             }
         },
-        components: {},
+        components: {
+            author_avatar
+        },
 
     }
 </script>

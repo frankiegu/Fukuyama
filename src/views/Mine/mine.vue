@@ -1,6 +1,9 @@
 <template>
     <div>
-        <TableCell></TableCell>
+<!--        登录后的单元条-->
+<!--        <TableCell></TableCell>-->
+
+        <router-view></router-view>
     </div>
 </template>
 

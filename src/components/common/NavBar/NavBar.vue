@@ -7,7 +7,7 @@
                     :src="this.$store.state.logo_addr"
             />
             <!--头像-->
-            <avatar></avatar>
+            <navbar_avatar></navbar_avatar>
 
             <van-icon @click="show_searchbar()" name="search" size="28"/>
             <searchbar></searchbar>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-    import avatar from "./avatar";
+    import navbar_avatar from "./avatar";
     import searchbar from "./searchbar";
 
     export default {
@@ -32,7 +32,7 @@
         created() {
         },
         components: {
-            avatar, searchbar
+            navbar_avatar, searchbar
         },
         methods: {
             show_searchbar(){

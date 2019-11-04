@@ -3,7 +3,7 @@
         <!--        轮播图-->
         <swipe></swipe>
         <!--        推荐宫格-->
-        <recommendbar></recommendbar>
+<!--        <recommendbar></recommendbar>-->
         <!--        贴照片-->
         <statusbar></statusbar>
     </skeleton>

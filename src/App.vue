@@ -3,9 +3,7 @@
         <NavBar></NavBar>
         <!--        这里封装了 页面和 底边 tabbar-->
         <!--        封装了四个大 View-->
-        <keep-alive>
-            <router-view></router-view>
-        </keep-alive>
+        <router-view></router-view>
 
         <!--        tabbar-->
         <tabbar></tabbar>

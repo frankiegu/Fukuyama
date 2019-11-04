@@ -3,7 +3,6 @@
             name="slide-fade"
             mode="out-in"
             appear>
-
         <van-image
                 v-if="this.$store.state.login_state === true"
                 @click="to_login()"
@@ -11,9 +10,7 @@
                 width="35"
                 height="35"
                 radius="5px"
-                style="float: right;"
-
-        />
+                style="float: right;"></van-image>
 
         <!--            图标空白头像 未登录-->
         <van-icon
@@ -22,6 +19,7 @@
                 size="28"
                 @click="to_login()"
         />
+
     </transition>
 </template>
 
@@ -34,8 +32,22 @@
             }
         },
         methods: {
+            // 如果未登录跳转到引导登录注册页面
             to_login() {
-                this.$store.commit('toggle_login');
+                // 如果未在登录状态和不在登录页面
+                if (!this.$store.state.login_state && this.$route.path !== '/login') {
+                    console.log(this.$route.path);
+                    this.$dialog.confirm({
+                        title: '提示',
+                        message: '还未登录，去登录?'
+                    }).then(() => {
+                        this.$router.push("/login");
+                        // on confirm
+                    }).catch(() => {
+                        // on cancel
+                    });
+                }
+
             }
         }
     }

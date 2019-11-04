@@ -22,6 +22,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - [x] 登录，
 - [x] 注册
+- [ ] 保持登录状态
 - [ ] 电话/邮箱 验证注册
 - [ ] 视频下方评论
 - [ ] 第三方登录
