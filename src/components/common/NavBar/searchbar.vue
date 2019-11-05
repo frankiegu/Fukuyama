@@ -1,7 +1,8 @@
 <template>
     <transition appear name="slide-fade">
-        <form action="/" v-if="this.$store.state.search_show">
+        <form action="/" v-show="this.show" >
             <van-search
+
                     v-model="value"
                     placeholder="请输入搜索关键词"
                     show-action
@@ -19,6 +20,11 @@
         data() {
             return {
                 value: "",
+            }
+        },
+        computed:{
+            show:function () {
+                return this.$store.state.user.search_show
             }
         },
         methods: {

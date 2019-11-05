@@ -9,7 +9,7 @@
             <!--头像-->
             <navbar_avatar></navbar_avatar>
 
-            <van-icon @click="show_searchbar()" name="search" size="28"/>
+            <van-icon @click="show_searchbar" name="search" size="28"/>
             <searchbar></searchbar>
         </van-cell>
 
@@ -27,16 +27,19 @@
         name: "NavBar",
         data() {
             return {
+                isLogin: this.$store.state.isLogin
             }
         },
         created() {
         },
+
         components: {
             navbar_avatar, searchbar
         },
         methods: {
-            show_searchbar(){
+            show_searchbar() {      // 搜索框是否展示 状态标志存在Vuex中
                 this.$store.commit('search_trigger');
+
             }
         },
     }

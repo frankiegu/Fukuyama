@@ -38,6 +38,7 @@
                 toast: this.$toast
             }
         },
+        computed: {},
         methods: {
             click_login() {
                 request({
@@ -50,9 +51,12 @@
 
                 })
                     .then(res => {
-                        console.log(res.data);
-                        this.$store.commit('toggle_login');
-                        this.merge()    // 登陆成功跳转
+                        console.log(res.data);  // 打印返回数据
+                        sessionStorage.setItem("userName", res.data.userName);      // 将信息存储到浏览器
+                        sessionStorage.setItem("userToken", res.data.userSession);
+                        sessionStorage.setItem("avatar", res.data.avatar)
+                        this.$store.commit("toggle_login", true);      // 调用Vuex改变登录状态
+                        // this.merge()    // 登陆成功跳转
                     })
                     .catch(err => {
                         console.log(err);

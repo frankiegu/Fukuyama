@@ -4,9 +4,9 @@
             mode="out-in"
             appear>
         <van-image
-                v-if="this.$store.state.login_state === true"
+                v-if="isLogin"
                 @click="to_login()"
-                :src="this.$store.state.avatar"
+                :src="this.$store.state.user.avatar"
                 width="35"
                 height="35"
                 radius="5px"
@@ -28,14 +28,19 @@
         name: "avatar",
         data() {
             return {
-                show: true
+                show: true,
+            }
+        },
+        computed: {
+            isLogin: function () {  // 返回Vuex中的登录状态
+                return this.$store.state.user.isLogin
             }
         },
         methods: {
             // 如果未登录跳转到引导登录注册页面
             to_login() {
                 // 如果未在登录状态和不在登录页面
-                if (!this.$store.state.login_state && this.$route.path !== '/login') {
+                if (!this.isLogin && this.$route.path !== '/login') {
                     console.log(this.$route.path);
                     this.$dialog.confirm({
                         title: '提示',
