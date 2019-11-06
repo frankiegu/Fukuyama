@@ -10,10 +10,10 @@
             </van-tabbar-item>
             <van-tabbar-item
                     replace
-                    to="/category"
-                    icon="bars"
+                    to="/popular"
+                    icon="fire"
             >
-                分类
+                时下流行
             </van-tabbar-item>
             <van-tabbar-item
                     push

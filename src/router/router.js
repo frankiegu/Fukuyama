@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const Homepage = () => import('../views/Home_page/Home_page.vue')
-const category = () => import('../views/Category/category.vue')
+const popular = () => import('../views/Category/fire.vue')
 const cart = () => import('../views/Cart/cart.vue')
 const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')
@@ -29,9 +29,9 @@ const router = new Router({
 
         },
         {
-            path: '/category',
-            name: 'category',
-            component: category,
+            path: '/popular',
+            name: 'popular',
+            component: popular,
 
         },
         {
