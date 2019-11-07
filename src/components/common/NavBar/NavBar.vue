@@ -12,9 +12,6 @@
             <van-icon @click="show_searchbar" name="search" size="28"/>
             <searchbar></searchbar>
         </van-cell>
-
-        <!--        v-if的搜索框-->
-
     </van-sticky>
 
 </template>

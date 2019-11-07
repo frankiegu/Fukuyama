@@ -13,6 +13,7 @@
                 <van-image fit="contain" :src="item"/>
             </van-grid-item>
         </van-grid>
+        <h1>你好你好你好</h1>
     </div>
 </template>
 
@@ -26,14 +27,6 @@
 
                     require("../../../assets/braces-img/indoor3.jpg"),
                     require("../../../assets/braces-img/indoor1.jpg"),
-                    require("../../../assets/braces-img/out-smile.jpg"),
-                    require("../../../assets/braces-img/out-sitting.jpg"),
-                    require("../../../assets/braces-img/out-sitting.jpg"),
-                    require("../../../assets/braces-img/out-sitting.jpg"),
-                    require("../../../assets/braces-img/out-sitting.jpg"),
-                    require("../../../assets/braces-img/out-sitting.jpg"),
-                    require("../../../assets/braces-img/out-sitting.jpg"),
-                    require("../../../assets/braces-img/out-sitting.jpg"),
                 ],
             }
         }

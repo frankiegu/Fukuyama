@@ -22,7 +22,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - [x] 登录，
 - [x] 注册
+- [ ] 账号个人中心
 - [ ] 保持登录状态 ==> 多少天免登陆
+- [ ] 用户背景板 （个人中心背景图片）
 - [ ] 渲染视频列表
 - [ ] 电话/邮箱 验证注册
 - [ ] 视频下方评论
@@ -42,7 +44,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 3.媒体库：
 
-- [ ] navbar 带 logo （可选） 搜索 v-if显示
+- [x] navbar 带 logo （可选） 搜索 v-if显示
 
 
 - [ ] 最近

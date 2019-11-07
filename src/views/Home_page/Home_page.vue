@@ -1,19 +1,18 @@
 <template>
-    <skeleton>
+    <div>
         <!--        轮播图-->
         <swipe></swipe>
         <!--        推荐宫格-->
-<!--        <recommendbar></recommendbar>-->
+        <!--        <recommendbar></recommendbar>-->
         <!--        贴照片-->
         <statusbar></statusbar>
-    </skeleton>
+    </div>
 </template>
 
 <script>
     import swipe from 'views/Home_page/homeComponents/Swipe'
     import recommendbar from 'views/Home_page/homeComponents/Recommendbar'
     import statusbar from 'views/Home_page/homeComponents/latest_status'
-    import skeleton from "../../components/common/skeleton/skeleton";
 
     export default {
         name: "Home_page",
@@ -29,7 +28,6 @@
             swipe
             , recommendbar
             , statusbar
-            , skeleton
         }
     }
 </script>

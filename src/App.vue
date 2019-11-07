@@ -3,7 +3,7 @@
         <NavBar></NavBar>
         <!--        这里封装了 页面和 底边 tabbar-->
         <!--        封装了四个大 View-->
-        <router-view></router-view>
+        <router-view style="padding-bottom: 50px;"></router-view>
 
         <!--        tabbar-->
         <tabbar></tabbar>
@@ -24,7 +24,5 @@
 </script>
 
 <style scoped>
-    /*#app{*/
-    /*    background-image: url("assets/Bing黄毛果蝠.jpg");*/
-    /*}*/
+
 </style>

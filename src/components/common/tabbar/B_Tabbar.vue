@@ -1,29 +1,28 @@
 <template>
-    <div>
-        <van-tabbar route active-color="#FF0000">
-            <van-tabbar-item
-                    replace
-                    to="/home"
-                    icon="wap-home"
-            >
-                首页
-            </van-tabbar-item>
-            <van-tabbar-item
-                    replace
-                    to="/popular"
-                    icon="fire"
-            >
-                时下流行
-            </van-tabbar-item>
-            <van-tabbar-item
-                    push
-                    to="/mine"
-                    icon="video"
-            >
-                媒体库
-            </van-tabbar-item>
-        </van-tabbar>
-    </div>
+
+    <van-tabbar route active-color="#FF0000" :fixed="true">
+        <van-tabbar-item
+                replace
+                to="/home"
+                icon="wap-home"
+        >
+            首页
+        </van-tabbar-item>
+        <van-tabbar-item
+                replace
+                to="/popular"
+                icon="fire"
+        >
+            时下流行
+        </van-tabbar-item>
+        <van-tabbar-item
+                push
+                to="/mine"
+                icon="video"
+        >
+            媒体库
+        </van-tabbar-item>
+    </van-tabbar>
 </template>
 
 <script>

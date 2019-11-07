@@ -16,8 +16,4 @@
 </script>
 
 <style scoped>
-    /*#aaa {*/
-    /*    padding-top: 46px;*/
-    /*    padding-bottom: 50px;*/
-    /*}*/
 </style>
