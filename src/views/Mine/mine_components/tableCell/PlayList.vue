@@ -16,6 +16,7 @@
                           color="#8f8f8f"/>
             </van-cell>
 
+            <!--            这里是用户自定义视频列表 到时候for循环 v-for-->
             <van-cell title="我是视频列表标题" :border="false" :center="true" label="8个视频"
                       title-style="margin-left: 10px ">
                 <van-image
