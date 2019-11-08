@@ -9,6 +9,7 @@ const cart = () => import('../views/Cart/cart.vue')
 const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')
 const register = () => import('../views/register/Register.vue')
+const account = () => import('../views/Mine/account.vue')
 
 const MetaInfo = {
     title: "Youtuba"
@@ -44,6 +45,7 @@ const router = new Router({
             path: '/mine',
             name: 'mine',
             component: mine,
+            children: []
         },
         {
             path: '/login',
@@ -53,6 +55,10 @@ const router = new Router({
         {
             path: '/register',
             component: register,
+        },
+        {
+            path: '/account',
+            component: account
         }
     ]
 })
