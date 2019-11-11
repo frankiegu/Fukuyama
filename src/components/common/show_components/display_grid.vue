@@ -3,7 +3,7 @@
             v-model="loading"
             :finished="finished"
             finished-text="没有更多了"
-            @load="onLoad"
+            @load="loadvideo()"
 
     >
         <van-grid :column-num="1">
@@ -28,6 +28,7 @@
 
 <script>
     import author_avatar from "./author_avatar";
+    import {request} from "../../../network/request";
 
     export default {
         data() {
@@ -36,6 +37,8 @@
                 list: [],
                 loading: false,
                 finished: false,
+                current_page: 1,
+                // 测试用的list接口 没后端接口时展示用
                 list2: [
                     {cover: require("@/assets/Bing黄毛果蝠.jpg")},
                     {cover: require("@/assets/logo.png")},
@@ -48,17 +51,36 @@
             pathto() {
                 this.$router.push("/cart")
             },
-            onLoad() {
-                // 异步更新数据
-                setTimeout(() => {
-                    for (let i = 0; i < 1; i++) {
-                        this.list.push({cover: require("@/assets/Bing黄毛果蝠.jpg")});
+            // onLoad() {
+            //     // 异步更新数据
+            //     setTimeout(() => {
+            //         for (let i = 0; i < 1; i++) {
+            //             this.list.push({cover: require("@/assets/Bing黄毛果蝠.jpg")});
+            //
+            //         }
+            //         // 加载状态结束
+            //         this.loading = false;
+            //
+            //     }, 2000);
+            // }
 
-                    }
-                    // 加载状态结束
+            loadvideo() {//分页加载视频
+                request({
+                    method: 'get',
+                    url: '/api/video?page=' + this.current_page// 填video接口
+                }).then(res => { // 获取成功
+                    let data = res.data;
+                    this.list.push(data[0]);// 向list里存放数据
+                    this.list.push(data[1]);
+                    this.current_page++;
                     this.loading = false;
 
-                }, 2000);
+                    console.log(data);
+                }).catch(err=>{
+                    this.finished = true;
+                    this.loading = false;
+
+                })
             }
         },
         components: {

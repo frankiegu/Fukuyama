@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export function request(config) {
     const instance = axios.create({
-        baseURL: 'http://localhost:8000/api/auth/',
+        baseURL: 'http://localhost:8000',
         method: 'post',
         transformRequest: [function (data) {
             // 对 data 进行任意转换处理
