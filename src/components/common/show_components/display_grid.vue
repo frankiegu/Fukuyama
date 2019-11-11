@@ -67,7 +67,7 @@
             loadvideo() {//分页加载视频
                 request({
                     method: 'get',
-                    url: '/api/video?page=' + this.current_page// 填video接口
+                    url: '/api/video?page=' + this.current_page// 填video接口 + "?page={{current_page}}"
                 }).then(res => { // 获取成功
                     let data = res.data;
                     this.list.push(data[0]);// 向list里存放数据
@@ -76,7 +76,7 @@
                     this.loading = false;
 
                     console.log(data);
-                }).catch(err=>{
+                }).catch(err => {   // 这代表着数据取完了 把状态设置成完成
                     this.finished = true;
                     this.loading = false;
 
