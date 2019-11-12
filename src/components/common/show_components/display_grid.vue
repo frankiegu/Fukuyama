@@ -7,12 +7,15 @@
 
     >
         <van-grid :column-num="1">
+
+            <!--            这里 to 到拼接后的地址-->
             <van-grid-item
                     v-for="item in list"
                     :key="item.index"
-                    @click="openvideo()">
+                    :to="fullurl(item.id)"
+            >
 
-                <!--                todo 视频封面封装到一个组件中-->
+                <!--            todo 视频封面封装到一个组件中-->
                 <van-image :src="item.cover" radius="2" fit="cover" height="33vh" width="100vm"/>
 
                 <van-cell :border="false" :center="true" title="我是标题" value="内容" label="作者·观看次数·时间">
@@ -36,6 +39,7 @@
             return {
                 // List动态加载组件的 数据
                 list: [],
+
                 loading: false,
                 finished: false,
                 current_page: 1,
@@ -75,7 +79,15 @@
         components: {
             author_avatar
         },
+        computed: {
+            // 视频详情地址 拼接
+            fullurl() {
+                return function (id) {
+                    return "/video/" + id
+                }
+            }
 
+        }
     }
 </script>
 
