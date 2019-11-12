@@ -1,11 +1,12 @@
 <template>
     <div>
         <!--        轮播图-->
-        <swipe></swipe>
+<!--        <swipe></swipe>-->
         <!--        推荐宫格-->
         <!--        <recommendbar></recommendbar>-->
         <!--        贴照片-->
-        <statusbar></statusbar>
+<!--        <statusbar></statusbar>-->
+        敬请期待
     </div>
 </template>
 

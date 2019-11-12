@@ -27,7 +27,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - [ ] 用户背景板 （个人频道） ==> 个人频道页
 - [x] 渲染视频列表
 - [ ] 电话/邮箱 验证注册
-- [ ] 视频下方评论
+- [ ] 视频下方评论     
 - [ ] 第三方登录
 - [ ] 按赞
 

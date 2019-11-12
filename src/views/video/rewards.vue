@@ -18,7 +18,7 @@
             return {
                 rewardslist: [
                     "good-job",
-                    "eye",
+                    "circle",
                     "share",
                     "down",
                     "add-square",

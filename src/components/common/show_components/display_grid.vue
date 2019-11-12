@@ -12,7 +12,8 @@
                     :key="item.index"
                     @click="openvideo()">
 
-                <van-image :src="item.cover" radius="4" fit="cover" height="33vh" width="100vm"/>
+                <!--                todo 视频封面封装到一个组件中-->
+                <van-image :src="item.cover" radius="2" fit="cover" height="33vh" width="100vm"/>
 
                 <van-cell :border="false" :center="true" title="我是标题" value="内容" label="作者·观看次数·时间">
                     <author_avatar :src="item.author" slot="icon"></author_avatar>
