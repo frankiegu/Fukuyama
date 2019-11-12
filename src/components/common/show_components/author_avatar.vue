@@ -3,7 +3,7 @@
                 round
                 style="margin-right: 10px;"
                 width="35"
-                height="35"
+
                 fit="cover"
                 :src="src"
         />
@@ -12,7 +12,7 @@
 <script>
     export default {
         name: "author_avatar",
-        props: ["src"]
+        props: ["src","height"]
 
     }
 </script>
