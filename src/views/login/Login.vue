@@ -43,7 +43,7 @@
             click_login() {
                 request({
                     method: 'post',
-                    url: 'login',
+                    url: '/api/auth/login',
                     data: {
                         'username': this.username,
                         'password': this.pwd,
@@ -52,9 +52,9 @@
                 })
                     .then(res => {
                         console.log(res.data);  // 打印返回数据
-                        sessionStorage.setItem("userName", res.data.userName);      // 将信息存储到浏览器
-                        sessionStorage.setItem("userToken", res.data.userSession);
-                        sessionStorage.setItem("avatar", res.data.avatar)
+                        localStorage.setItem("userName", res.data.userName);      // 将信息存储到浏览器
+                        localStorage.setItem("userToken", res.data.userSession);
+                        localStorage.setItem("avatar", res.data.avatar)
                         this.$store.commit("toggle_login", true);      // 调用Vuex改变登录状态
                         // this.merge()    // 登陆成功跳转
                     })

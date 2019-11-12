@@ -10,12 +10,12 @@
             <van-grid-item
                     v-for="item in list"
                     :key="item.index"
-                    @click="pathto">
+                    @click="openvideo()">
 
                 <van-image :src="item.cover" radius="4" fit="cover" height="33vh" width="100vm"/>
 
                 <van-cell :border="false" :center="true" title="我是标题" value="内容" label="作者·观看次数·时间">
-                    <author_avatar style="margin-right: 10px;" slot="icon"></author_avatar>
+                    <author_avatar :src="item.author" slot="icon"></author_avatar>
                 </van-cell>
 
             </van-grid-item>
@@ -48,21 +48,9 @@
             }
         },
         methods: {
-            pathto() {
-                this.$router.push("/cart")
+            openvideo() {
+                this.$router.push("/video/1")
             },
-            // onLoad() {
-            //     // 异步更新数据
-            //     setTimeout(() => {
-            //         for (let i = 0; i < 1; i++) {
-            //             this.list.push({cover: require("@/assets/Bing黄毛果蝠.jpg")});
-            //
-            //         }
-            //         // 加载状态结束
-            //         this.loading = false;
-            //
-            //     }, 2000);
-            // }
 
             loadvideo() {//分页加载视频
                 request({

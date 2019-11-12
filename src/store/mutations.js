@@ -3,10 +3,10 @@ export default {
 
         // 切换登录状态
         state.user.isLogin = status
-        sessionStorage.setItem("isLogin", status)
+        localStorage.setItem("isLogin", status)
 
         //  将头像替换为本地存储里的头像地址
-        state.user.avatar = sessionStorage.getItem("avatar")
+        state.user.avatar =localStorage.getItem("avatar")
     },
 
     search_trigger(state) {  //显示搜索框

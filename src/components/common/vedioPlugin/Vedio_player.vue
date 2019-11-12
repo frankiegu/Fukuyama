@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="playercontainer">
         <div id="dplayer"></div>
     </div>
 </template>
@@ -37,7 +37,10 @@
         methods: {}
     }
 </script>
-
 <style scoped>
+    /*播放器大小设置*/
+    #dplayer {
+        height: 35vh;
 
+    }
 </style>

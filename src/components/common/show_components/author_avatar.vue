@@ -1,16 +1,19 @@
 <template>
-    <van-image
-            width="35"
-            height="35"
-            radius="10px"
-            fit="cover"
-            src="https://img.yzcdn.cn/vant/cat.jpeg"
-    />
+        <van-image
+                round
+                style="margin-right: 10px;"
+                width="35"
+                height="35"
+                fit="cover"
+                :src="src"
+        />
 </template>
 
 <script>
     export default {
-        name: "author_avatar"
+        name: "author_avatar",
+        props: ["src"]
+
     }
 </script>
 

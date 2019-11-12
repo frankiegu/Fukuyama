@@ -3,8 +3,8 @@ export default {
 
     user: { // 用户状态对象
         //  初始化时获取浏览器里面存储的东西就可以实现刷新后丢失数据
-        avatar: sessionStorage.getItem("avatar"),       //  头像数据
-        isLogin: sessionStorage.getItem("isLogin"),      // 登录状态
+        avatar: localStorage.getItem("avatar"),       //  头像数据
+        isLogin: localStorage.getItem("isLogin"),      // 登录状态
 
         search_show: false,
     }
