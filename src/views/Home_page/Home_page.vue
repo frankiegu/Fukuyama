@@ -6,7 +6,13 @@
         <!--        <recommendbar></recommendbar>-->
         <!--        贴照片-->
 <!--        <statusbar></statusbar>-->
-        敬请期待
+        <van-notice-bar
+                color="#1989fa"
+                background="#ecf9ff"
+                left-icon="info-o"
+        >
+            第一版 很多内容没有填充 更多新内容敬请期待 :-)    By - Bwijn
+        </van-notice-bar>
     </div>
 </template>
 

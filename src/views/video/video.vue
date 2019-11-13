@@ -1,4 +1,5 @@
 <template>
+
     <div>
         <Player></Player>
 
@@ -14,12 +15,16 @@
     import actionbar from "./actionbar";
 
     export default {
-        name: "cart"
-        ,
+        name: "cart",
         components: {
             Player,
             actionbar
         },
+        data() {
+            return {
+            }
+        },
+
     }
 </script>
 
