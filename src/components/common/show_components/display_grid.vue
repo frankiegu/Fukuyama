@@ -64,7 +64,9 @@
                 }).then(res => { // 获取成功
                     let data = res.data;
                     this.list.push(data[0]);// 向list里存放数据
-                    this.list.push(data[1]);
+                    if (data[1]){
+                        this.list.push(data[1]);
+                    }
                     this.current_page++;
                     this.loading = false;
 

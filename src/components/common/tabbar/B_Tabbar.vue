@@ -1,6 +1,7 @@
 <template>
 
-    <van-tabbar route active-color="#FF0000" :fixed="true" :border="true">
+    <van-tabbar active-color="#FF0000" :fixed="true" :border="true" :route="true">
+
         <van-tabbar-item
                 replace
                 to="/home"

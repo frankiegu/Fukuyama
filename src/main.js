@@ -13,8 +13,10 @@ Vue.use(Vant);
 Vue.use(VueLazyload)
 
 
-new Vue({
+let vm = new Vue({
     router,
     store,
     render: h => h(App),
 }).$mount('#app')
+
+export {vm}

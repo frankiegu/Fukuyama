@@ -7,5 +7,11 @@ export default {
         isLogin: localStorage.getItem("isLogin"),      // 登录状态
 
         search_show: false,
+    },
+
+    // 视频详情页视频数据
+    video: {
+        url: "",
+        pic: "",
     }
 }
