@@ -18,7 +18,8 @@
                 <!--            todo 视频封面封装到一个组件中-->
                 <van-image :src="item.cover" radius="2" fit="cover" height="33vh" width="100vm"/>
 
-                <van-cell :border="false" :center="true" title="我是标题" value="内容" label="作者·观看次数·时间">
+                <van-cell :border="false" :center="true" :title="item.title"
+                          :label="videoinfo(item.author_name, item.view_count, item.days_since_joined)">
                     <author_avatar :src="item.author" slot="icon"></author_avatar>
                 </van-cell>
 
@@ -33,6 +34,7 @@
 <script>
     import author_avatar from "./author_avatar";
     import {request} from "../../../network/request";
+    import {List, Grid, GridItem, Image, Cell} from 'vant'
 
     export default {
         data() {
@@ -64,13 +66,16 @@
                 }).then(res => { // 获取成功
                     let data = res.data;
                     this.list.push(data[0]);// 向list里存放数据
-                    if (data[1]){
+                    if (data[1]) {
                         this.list.push(data[1]);
                     }
                     this.current_page++;
                     this.loading = false;
 
-                    console.log(data);
+                    // 打印后端数据
+                    for (let i = 0; i < data.length; i++) {
+                        console.log(data[i])
+                    }
                 }).catch(err => {   // 这代表着数据取完了 把状态设置成完成
                     this.finished = true;
                     this.loading = false;
@@ -79,13 +84,25 @@
             }
         },
         components: {
-            author_avatar
+            [List.name]: List,
+            [GridItem.name]: GridItem,
+            [Grid.name]: Grid,
+            [Cell.name]: Cell,
+            [Image.name]: Image,
+            author_avatar,
         },
         computed: {
             // 视频详情地址 拼接
             fullurl() {
                 return function (id) {
                     return "/video/" + id
+                }
+            },
+            videoinfo() {
+                return function (name, count, time) {
+                    // let time1 = time.split("-")[0] + time.split("-")[1] + time.split("-")[2].split("T")[0];
+                    // console.log(time1);
+                    return name + " · " + count + "次观看" + " · " + time + "天前"
                 }
             }
 

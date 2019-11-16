@@ -12,10 +12,11 @@
 <script>
     import TableCell from 'views/Mine/mine_components/tableCell/TableCell'
     import PlayList from "./mine_components/tableCell/PlayList";
-
+    import {Divider} from 'vant'
     export default {
         name: "mine",
         components: {
+            [Divider.name]:Divider,
             TableCell,
             PlayList
         }

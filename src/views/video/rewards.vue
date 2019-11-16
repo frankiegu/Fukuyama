@@ -5,15 +5,22 @@
                 :key="value"
                 text="123"
         >
-            <van-icon size="22" color="#8f8f8f" :name="value"  slot="icon"/>
+            <van-icon size="22" color="#8f8f8f" :name="value" slot="icon"/>
         </van-grid-item>
     </van-grid>
 
 </template>
 
 <script>
+    import {Grid, GridItem, Icon} from 'vant';
+
     export default {
         name: "rewards",
+        components: {
+            [Grid.name]: Grid,
+            [GridItem.name]: GridItem,
+            [Icon.name]: Icon,
+        },
         data() {
             return {
                 rewardslist: [

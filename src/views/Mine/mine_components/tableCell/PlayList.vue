@@ -34,8 +34,17 @@
 </template>
 
 <script>
+    import {CellGroup, Cell, Image, Icon} from 'vant';
+
     export default {
         name: "PlayList",
+
+        components: {
+            [CellGroup.name]: CellGroup,
+            [Cell.name]: Cell,
+            [Icon.name]: Icon,
+            [Image.name]: Image,
+        },
     }
 </script>
 

@@ -42,6 +42,8 @@
     import rewards from "./rewards";
     import brief from "./brief";
     import autovideo from "./autovideo";
+    import {Skeleton, Cell,} from 'vant'
+    import {request} from "../../network/request";
 
     export default {
         name: "actionbar",
@@ -53,15 +55,27 @@
             };
         },
         components: {
+            [Skeleton.name]: Skeleton,
+            [Cell.name]: Cell,
             author_avatar,
             rewards,
             brief,
             autovideo
         },
         mounted() {
+            // 骨架屏
             setTimeout(() => {
                 this.loading = false
-            }, 2000)
+            }, 2000);
+
+            // 加载视频数据
+            request({       // axios异步加载数据
+                method: 'get',
+                url: '/api/video/' + this.id,
+            })
+
+
+
         }
     }
 </script>

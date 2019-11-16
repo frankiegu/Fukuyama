@@ -1,6 +1,6 @@
 <template>
     <transition appear name="slide-fade">
-        <form action="/" v-show="this.show" >
+        <form action="/" v-show="this.show">
             <van-search
 
                     v-model="value"
@@ -15,15 +15,20 @@
 </template>
 
 <script>
+    import {Search} from 'vant'
+
     export default {
         name: "searchbar",
+        components:{
+            [Search.name]:Search
+        },
         data() {
             return {
                 value: "",
             }
         },
-        computed:{
-            show:function () {
+        computed: {
+            show: function () {
                 return this.$store.state.user.search_show
             }
         },

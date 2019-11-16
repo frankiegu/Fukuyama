@@ -19,6 +19,7 @@
 <script>
     import navbar_avatar from "./avatar";
     import searchbar from "./searchbar";
+    import {Sticky, Cell, Image, Icon} from 'vant';
 
     export default {
         name: "NavBar",
@@ -31,7 +32,13 @@
         },
 
         components: {
-            navbar_avatar, searchbar
+            [Sticky.name]: Sticky,
+            [Cell.name]: Cell,
+            [Icon.name]: Icon,
+            [Image.name]:Image,
+            navbar_avatar,
+            searchbar,
+
         },
         methods: {
             show_searchbar() {      // 搜索框是否展示 状态标志存在Vuex中

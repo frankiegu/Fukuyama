@@ -1,18 +1,23 @@
 <template>
-        <van-image
-                round
-                style="margin-right: 10px;"
-                width="35"
+    <van-image
+            round
+            style="margin-right: 10px;"
+            width="35"
 
-                fit="cover"
-                :src="src"
-        />
+            fit="cover"
+            :src="src"
+    />
 </template>
 
 <script>
+    import {Image} from 'vant'
+
     export default {
         name: "author_avatar",
-        props: ["src","height"]
+        components:{
+            [Image.name]:Image,
+        },
+        props: ["src", "height"]
 
     }
 </script>

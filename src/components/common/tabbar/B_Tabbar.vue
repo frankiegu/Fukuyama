@@ -27,6 +27,8 @@
 </template>
 
 <script>
+    import {Tabbar, TabbarItem} from 'vant';
+
     export default {
         name: "B_Tabbar",
         data() {
@@ -34,6 +36,10 @@
                 active: 0,
             }
         },
+        components: {
+            [Tabbar.name]: Tabbar,
+            [TabbarItem.name]: TabbarItem,
+        }
     }
 </script>
 

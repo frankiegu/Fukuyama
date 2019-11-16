@@ -24,8 +24,14 @@
 </template>
 
 <script>
+    import {Image, Icon} from 'vant';
+
     export default {
         name: "avatar",
+        components: {
+            [Image.name]: Image,
+            [Icon.name]: Icon,
+        },
         data() {
             return {
                 show: true,

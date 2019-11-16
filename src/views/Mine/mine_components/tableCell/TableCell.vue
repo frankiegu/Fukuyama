@@ -3,13 +3,18 @@
     <div>
         <van-cell title="历史观看" icon="clock-o" :border="false"/>
         <van-cell title="我的视频" icon="video-o" :border="false"/>
-        <van-cell title="稍后观看"  label="8个视频" icon="underway" :border="false"/>
+        <van-cell title="稍后观看" label="8个视频" icon="underway" :border="false"/>
     </div>
 </template>
 
 <script>
+    import {Cell} from 'vant'
+
     export default {
         name: "TableCell",
+        components: {
+            [Cell.name]: Cell,
+        },
         data() {
             return {
                 imageList: [

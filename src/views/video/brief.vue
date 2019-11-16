@@ -20,8 +20,14 @@
 </template>
 
 <script>
+    import {Collapse, CollapseItem} from 'vant';
+
     export default {
         name: "brief",
+        components: {
+            [CollapseItem.name]: CollapseItem,
+            [Collapse.name]: Collapse,
+        },
         data() {
             return {
                 activeNames: ['1']
@@ -31,7 +37,7 @@
 </script>
 
 <style scoped>
-span{
-    background-color: red;
-}
+    span {
+        background-color: red;
+    }
 </style>
