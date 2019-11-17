@@ -1,6 +1,26 @@
-# 10-9
+# 此项目目前已被雪藏（开发暂停）目前主打PC端
 
-## Project setup
+如有问题请联系邮箱：779805126@qq.com
+
+### 项目展示：
+
+###### 推荐页
+
+![](C:\Users\77980\Pictures\首页.png)
+
+
+
+###### 个人页
+
+![](C:\Users\77980\Pictures\个人页.jpg)
+
+
+
+
+
+
+
+## setup
 ```
 npm install
 ```
@@ -15,17 +35,14 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 # Project contains：↓
 
 - [x] 登录，
 - [x] 注册
 - [x] 账号个人中心
-- [x] 保持登录状态 ==>			
+- [x] 保持登录状态 		
 - [x]  多少天免登陆
-- [ ] 用户背景板 （个人频道） ==> 个人频道页
+- [ ] 用户背景板
 - [x] 渲染视频列表
 - [ ] 视频下方评论     
 - [ ] 第三方登录
@@ -34,12 +51,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - [ ] 收藏视频
 
-
-
-- [x] 骨架屏  ==> 11.13
+- [x] 骨架屏  
 - [x] 过渡动画
 
-- [x] navbar 带 logo （可选） 搜索 v-if显示
+- [x] navbar 带 logo 
 
 
 - [ ] 最近
@@ -56,6 +71,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - [ ] 如果可以 记录播放位置
 - [x] Transition Vue 过渡效果
-- [x] 路由过渡动效          ==> 11.13
+- [x] 路由过渡动效         
 - [x] Nginx 部署 提供静态资源
 - [ ] 添加广告
