@@ -6,13 +6,13 @@
 
 ###### 推荐页
 
-![](C:\Users\77980\Pictures\首页.png)
+![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E9%A6%96%E9%A1%B5.png)
 
 
 
 ###### 个人页
 
-![](C:\Users\77980\Pictures\个人页.jpg)
+![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E4%B8%AA%E4%BA%BA%E9%A1%B5.jpg)
 
 
 
