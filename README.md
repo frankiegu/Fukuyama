@@ -45,7 +45,7 @@
 
 ###### 后端
 
-1. [rest]: https://baike.baidu.com/item/RESTful/4406165?fr=aladdin
+1. [restful风格]( https://baike.baidu.com/item/RESTful/4406165?fr=aladdin )
 
 
 
