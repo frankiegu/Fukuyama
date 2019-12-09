@@ -20,7 +20,7 @@
             mp4dp() {
                 return new DPlayer({
                     container: document.getElementById('dplayer'),
-                    theme: "#ff0000",   // 主题色
+                    theme: "hotpink",   // 主题色
                     method: 'get',
                     video: {
                         url: this.$store.state.video.url,

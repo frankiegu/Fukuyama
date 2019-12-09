@@ -3,14 +3,16 @@
         <van-cell>
             <van-image
                     height="32"
-                    width="100"
+                    width="90"
                     :src="this.$store.state.logo_addr"
             />
             <!--头像-->
             <navbar_avatar></navbar_avatar>
 
             <van-icon @click="show_searchbar" name="search" size="28"/>
+
             <searchbar></searchbar>
+
         </van-cell>
     </van-sticky>
 
