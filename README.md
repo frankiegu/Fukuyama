@@ -45,11 +45,7 @@
 
 - #### 后端
 
-  1. [RESTFUL]: https://baike.baidu.com/item/RESTful/4406165?fr=aladdin
-
-     风格 
-
-
+  1. [RESTFUL风格]: https://baike.baidu.com/item/RESTful/4406165?fr=aladdin
 
 ### setup
 
