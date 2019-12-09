@@ -1,41 +1,72 @@
-# 此项目目前已被雪藏（开发暂停）
+# Youtuba
 
-如有问题请联系邮箱：779805126@qq.com
+一个仿youtube的移动端app 基于vue2.x + django rest framework  rest framework-JWT 开发
 
-### 项目展示：
+## 项目展示
 
-###### 推荐页
+- 推荐页![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E9%A6%96%E9%A1%B5.png)
 
-![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E9%A6%96%E9%A1%B5.png)
+- 个人页 ![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E4%B8%AA%E4%BA%BA%E9%A1%B5.jpg)
+
+## 项目概要
+
+- 项目初衷 用来看一些仅限港澳台地区的 [动漫] [ACG] [Cover]  
+- 本项目用到的技术栈： vue-cli + vue-router + vuex + axios + vue-axios + vant( UI ) 
+
+## 主要功能
+
+1. 登录，
+2. 注册
+3. 账号个人中心
+4. 保持登录状态 		
+5. 多少天免登陆
+6. 用户背景板
+7. 渲染视频列表
+8. 视频下方评论     
+9. 第三方登录
+10. 按赞
+
+### 实现主流开发风格
+
+- #### 前端
+
+  1. 常用目录别名
+  2. Vant/Rem适配
+  3. scss支持、_mixin.scss、_variables.scss
+  4. 页面切换动画+keepAlive
+  5. 页面标题
+  6. 自动注册：自动注册路由表/自动注册Vuex/svg图标引入
+  7. mock server
+  8. axios封装、api管理
+  9. 用户鉴权
+  10. vuex-loading
+  11. vo-pages/dayjs/vconsole
+  12. 生产环境优化
+
+- #### 后端
+
+  1. [RESTFUL]: https://baike.baidu.com/item/RESTful/4406165?fr=aladdin
+
+     风格 
 
 
 
-###### 个人页
+### setup
 
-![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E4%B8%AA%E4%BA%BA%E9%A1%B5.jpg)
-
-
-
-
-
-
-
-## setup
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 npm run build
 ```
 
-如果代码对你有用的话 欢迎打赏 感谢star
-
-![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191121113955.jpg)
-
+如有问题请联系邮箱：779805126@qq.com
