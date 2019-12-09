@@ -1,6 +1,8 @@
 <template>
 
-    <van-tabbar active-color="#FF0000" :fixed="true" :border="true" :route="true">
+    <van-tabbar
+            active-color="hotpink"
+            :fixed="true" :border="true" :route="true">
 
         <van-tabbar-item
                 replace

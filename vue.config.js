@@ -18,7 +18,8 @@ module.exports = {
                     red: '#03a9f4',
                     blue: '#3eaf7c',
                     orange: '#f08d49',
-                    'text-color': '#111'
+                    'text-color': '#111',
+                    "button-primary-background-color": "#0099ff",
                 }
             }
         }

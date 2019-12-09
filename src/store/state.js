@@ -1,5 +1,5 @@
 export default {
-    logo_addr: require("assets/youtobe.jpg"),   // logo地址 // Nginx -_-
+    logo_addr: require("assets/logo.png"),   // logo地址 // Nginx -_-
 
     user: { // 用户状态对象
         //  初始化时获取浏览器里面存储的东西就可以实现刷新后丢失数据

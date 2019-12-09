@@ -7,8 +7,8 @@
                 v-if="isLogin"
                 @click="to_login()"
                 :src="this.$store.state.user.avatar"
-                width="35"
-                height="35"
+                width="28"
+                height="28"
                 radius="5px"
                 style="float: right;"></van-image>
 
