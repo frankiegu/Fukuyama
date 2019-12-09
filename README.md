@@ -4,9 +4,13 @@
 
 ## 项目展示
 
-- 推荐页![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E9%A6%96%E9%A1%B5.png)
+- 推荐页
 
-- 个人页 ![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E4%B8%AA%E4%BA%BA%E9%A1%B5.jpg)
+  ![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E9%A6%96%E9%A1%B5.png)
+
+- 个人页 
+
+  ![](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E4%B8%AA%E4%BA%BA%E9%A1%B5.jpg)
 
 ## 项目概要
 
