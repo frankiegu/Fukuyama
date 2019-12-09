@@ -8,7 +8,6 @@ Vue.config.productionTip = false
 
 Vue.use(VueLazyload)
 
-
 let vm = new Vue({
     router,
     store,
