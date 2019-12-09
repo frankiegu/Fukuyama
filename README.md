@@ -28,24 +28,26 @@
 
 ### 实现主流开发风格
 
-- #### 前端
+###### 前端
 
-  1. 常用目录别名
-  2. Vant/Rem适配
-  3. scss支持、_mixin.scss、_variables.scss
-  4. 页面切换动画+keepAlive
-  5. 页面标题
-  6. 自动注册：自动注册路由表/自动注册Vuex/svg图标引入
-  7. mock server
-  8. axios封装、api管理
-  9. 用户鉴权
-  10. vuex-loading
-  11. vo-pages/dayjs/vconsole
-  12. 生产环境优化
+1. 常用目录别名
+2. Vant/Rem适配
+3. scss支持、_mixin.scss、_variables.scss
+4. 页面切换动画+keepAlive
+5. 页面标题
+6. 自动注册：自动注册路由表/自动注册Vuex/svg图标引入
+7. mock server
+8. axios封装、api管理
+9. 用户鉴权
+10. vuex-loading
+11. vo-pages/dayjs/vconsole
+12. 生产环境优化
 
-- #### 后端
+###### 后端
 
-  1. [RESTFUL风格]: https://baike.baidu.com/item/RESTful/4406165?fr=aladdin
+1. [rest]: https://baike.baidu.com/item/RESTful/4406165?fr=aladdin
+
+
 
 ### setup
 
