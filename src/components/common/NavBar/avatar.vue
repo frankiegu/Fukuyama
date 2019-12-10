@@ -4,12 +4,12 @@
             mode="out-in"
             appear>
         <van-image
-                v-if="isLogin"
+                v-if="this.$store.state.user.token"
                 @click="to_login()"
                 :src="this.$store.state.user.avatar"
                 width="28"
                 height="28"
-                radius="5px"
+                round
                 style="float: right;"></van-image>
 
         <!--            图标空白头像 未登录-->
@@ -29,8 +29,8 @@
     export default {
         name: "avatar",
         components: {
-            [Image.name]: Image,
-            [Icon.name]: Icon,
+            // [Image.name]: Image,
+            // [Icon.name]: Icon,
         },
         data() {
             return {
@@ -39,7 +39,9 @@
         },
         computed: {
             isLogin: function () {  // 返回Vuex中的登录状态
-                return this.$store.state.user.isLogin
+                // console.log('token::::::::::::' + this.$store.state.user.token);
+                // console.log(this.$route.router);
+                return this.$store.state.user.token
             }
         },
         methods: {
@@ -47,7 +49,7 @@
             to_login() {
                 // 如果未在登录状态和不在登录页面
                 if (!this.isLogin && this.$route.path !== '/login') {
-                    console.log(this.$route.path);
+                    // console.log(this.$route.path);
                     this.$dialog.confirm({
                         title: '提示',
                         message: '还未登录，去登录?'

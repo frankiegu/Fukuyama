@@ -71,4 +71,3 @@ npm run serve
 npm run build
 ```
 
-如有问题请联系邮箱：779805126@qq.com

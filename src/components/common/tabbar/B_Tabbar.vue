@@ -18,6 +18,14 @@
         >
             时下流行
         </van-tabbar-item>
+
+        <van-tabbar-item
+                replace
+                to="/search"
+                icon="envelop-o"
+        >
+            收件箱
+        </van-tabbar-item>
         <van-tabbar-item
                 push
                 to="/mine"

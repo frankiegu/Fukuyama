@@ -1,5 +1,5 @@
 <template>
-    <van-grid square :border="false" icon-size="22" gutter="30" :column-num="5" style="height: 40px">
+    <van-grid square :border="false" icon-size="30" gutter="60" :column-num="3" style="height: 50px">
         <van-grid-item
                 v-for="value in rewardslist"
                 :key="value"
@@ -12,22 +12,16 @@
 </template>
 
 <script>
-    import {Grid, GridItem, Icon} from 'vant';
 
     export default {
         name: "rewards",
         components: {
-            [Grid.name]: Grid,
-            [GridItem.name]: GridItem,
-            [Icon.name]: Icon,
         },
         data() {
             return {
                 rewardslist: [
                     "good-job",
-                    "circle",
                     "share",
-                    "down",
                     "add-square",
                 ]
             }

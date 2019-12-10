@@ -3,7 +3,6 @@
         <van-swipe-item v-for="(image, index) in images" :key="index">
             <van-image
                     lazy-load
-                    width="100%"
                     height="200"
                     fit="contain"
                     :src="image"
@@ -19,10 +18,10 @@
         data() {
             return {
                 images: [
-                    require("../../../assets/braces-img/indoor1.jpg"),
-                    require("../../../assets/braces-img/indoor-special1.jpg"),
-                    require("../../../assets/braces-img/indoor2.jpg"),
-                    require("../../../assets/braces-img/indoor3.jpg"),
+                    require("@/assets/braces-img/indoor1.jpg"),
+                    require("@/assets/braces-img/indoor-special1.jpg"),
+                    require("@/assets/braces-img/indoor2.jpg"),
+                    require("@/assets/braces-img/indoor3.jpg"),
                 ]
             }
         },

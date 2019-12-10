@@ -3,7 +3,7 @@
 </template>
 
 <script>
-    import display_grid from "components/common/show_components/display_grid";
+    import display_grid from "../../components/common/video/display_grid";
 
     export default {
         data() {

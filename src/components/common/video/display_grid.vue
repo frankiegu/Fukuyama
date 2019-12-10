@@ -4,18 +4,16 @@
             :finished="finished"
             finished-text="没有更多了"
             @load="loadvideo()"
-
     >
         <van-grid :column-num="1">
 
             <!--            这里 to 到拼接后的地址-->
             <van-grid-item
-                    v-for="item in list"
+                    v-for="item in list2"
                     :key="item.index"
                     :to="fullurl(item.id)"
             >
 
-                <!--            todo 视频封面封装到一个组件中-->
                 <van-image :src="item.cover" radius="2" fit="cover" height="33vh" width="100vm"/>
 
                 <van-cell :border="false" :center="true" :title="item.title"

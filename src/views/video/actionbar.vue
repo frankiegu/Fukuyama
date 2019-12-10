@@ -38,7 +38,7 @@
 </template>
 
 <script>
-    import author_avatar from "../../components/common/show_components/author_avatar";
+    import author_avatar from "../../components/common/video/author_avatar";
     import rewards from "./rewards";
     import brief from "./brief";
     import autovideo from "./autovideo";
@@ -73,7 +73,6 @@
                 method: 'get',
                 url: '/api/video/' + this.id,
             })
-
 
 
         }

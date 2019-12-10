@@ -37,6 +37,7 @@ const router = new Router({
         },
         {
             path: '/video/:id',
+            name: "VideoDetail",
             component: video,
 
         },
