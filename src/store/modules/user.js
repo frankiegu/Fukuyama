@@ -7,7 +7,7 @@ const user = {
         name: '',
         username: '',
         id: '',
-        avatar: '',
+        avatar: require("@/assets/dzs.jpg"),
         introduction: '',
         roles: [],
         urls: [],

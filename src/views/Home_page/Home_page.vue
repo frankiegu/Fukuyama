@@ -3,7 +3,7 @@
         <!--        轮播图-->
         <Swipe></Swipe>
         <!--        推荐宫格-->
-        <!--        <recommendbar></recommendbar>-->
+        <Recommendbar></Recommendbar>
         <!--        贴照片-->
         <!--        <statusbar></statusbar>-->
         <!--        <van-notice-bar-->
@@ -13,31 +13,24 @@
         <!--        >-->
         <!--            第一版 很多内容没有填充 更多新内容敬请期待 :-) By - Bwijn-->
         <!--        </van-notice-bar>-->
-
+        <!--todo 主页推荐-->
 
     </div>
 </template>
 
 <script>
     import Swipe from "./homeComponents/Swipe";
-    import recommendbar from 'views/Home_page/homeComponents/Recommendbar'
+    import Recommendbar from "./homeComponents/Recommendbar";
     import statusbar from 'views/Home_page/homeComponents/latest_status'
-    import {NoticeBar} from 'vant';
 
     export default {
         name: "Home_page",
-        data() {
-            return {
-                list: [],
-                loading: false,
-                finished: false
-            };
-        },
         methods: {},
+
         components: {
             // 注册组件 组件标签名: => 组件名
             Swipe
-            , recommendbar
+            , Recommendbar
             , statusbar,
         }
     }

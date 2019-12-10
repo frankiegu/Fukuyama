@@ -1,25 +1,32 @@
 <template>
-    <van-sticky v-show="this.show">
+    <van-sticky>
+        <van-cell clickable v-show="SearchBar">
+            <van-image
+                    v-fb
+                    height="32"
+                    width="90"
+                    :src="this.$store.state.logo"
+            />
+            <!--头像-->
+            <van-icon v-fb slot="right-icon" @click="showPopup" name="search" size="28"/>
 
-        <transition translate name="fade" mode="out-in">
-            <van-cell clickable v-if="!SearchBar">
-                <van-image
-                        v-fb
-                        height="32"
-                        width="90"
-                        :src="this.$store.state.logo"
-                />
-                <!--头像-->
-                <van-icon v-fb slot="right-icon" @click="show_searchbar" name="search" size="28"/>
-
-                <navbar_avatar slot="right-icon"></navbar_avatar>
+            <navbar_avatar slot="right-icon"></navbar_avatar>
 
 
-            </van-cell>
+        </van-cell>
 
-            <searchbar v-else
-            ></searchbar>
-        </transition>
+
+        <van-popup
+                v-model="show"
+                position="top"
+                :style="{ height: '100px' }"
+        >
+            <searchbar></searchbar>
+
+        </van-popup>
+
+
+        <!-- 图标位置 -->
 
     </van-sticky>
 </template>
@@ -33,7 +40,7 @@
         name: "NavBar",
         data() {
             return {
-                show: true
+                show: false,
             }
         },
         created() {
@@ -45,18 +52,21 @@
         },
         components: {navbar_avatar, searchbar},
         methods: {
-            show_searchbar() {      // 搜索框是否展示 状态标志存在Vuex中
-                this.$store.commit("SEARCHBAR_TRIGGER")
+            show_searchbar(payload) {      // 搜索框是否展示 状态标志存在Vuex中
+                this.$store.commit("SEARCHBAR_TRIGGER", payload)
             },
-
-            sc() {
-                return {scrollTop: 50, isFixed: false}
+            showPopup() {
+                this.show = !this.show;
             }
         },
         watch: {
             // 到看视频的时候关闭顶部导航
             $route(to, from) {
-                this.show = to.name !== "VideoDetail";
+                if (to.name === "VideoDetail") {
+                    this.show_searchbar(false)
+                }else {
+                    this.show_searchbar(true)
+                }
             },
 
         }
@@ -68,14 +78,8 @@
         float: right;
         padding-left: 10px;
         padding-right: 10px;
+        /*background-color: chartreuse;*/
     }
 
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .2s;
-    }
 
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-    {
-        opacity: 0;
-    }
 </style>

@@ -1,11 +1,12 @@
 const app = {
     state: {
-        SearchBar: true
+        SearchBar: false,
+        theme:"hotpink"
     },
     mutations: {
-        SEARCHBAR_TRIGGER(state) {
+        SEARCHBAR_TRIGGER(state, payload) {
             // 变更状态
-            state.SearchBar = !state.SearchBar
+            state.SearchBar = payload
         }
     },
     action: {}

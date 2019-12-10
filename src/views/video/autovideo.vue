@@ -54,7 +54,7 @@
 
 <script>
     import videotitle from "../../components/content/videotitle";
-    import detail from "../../components/content/detail";
+    import detail from "../Home_page/homeComponents/detail";
     import video_cover from "../../components/content/video_cover";
     import {CellGroup, Cell} from 'vant';
 

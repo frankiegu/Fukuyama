@@ -10,7 +10,7 @@ const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')
 const register = () => import('../views/register/Register.vue')
 const account = () => import('../views/Mine/account.vue')
-
+const search = ()=> import('../views/Mine/account.vue')
 const MetaInfo = {
     title: "Youtuba"
 }
