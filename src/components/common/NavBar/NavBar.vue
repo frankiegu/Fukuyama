@@ -5,7 +5,7 @@
                     v-fb
                     height="32"
                     width="90"
-                    :src="this.$store.state.logo"
+                    :src="this.$store.state.app.logo"
             />
             <!--头像-->
             <van-icon v-fb slot="right-icon" @click="showPopup" name="search" size="28"/>
@@ -32,7 +32,6 @@
 </template>
 
 <script>
-    // todo 打开搜索栏后隐藏改单元格其他元素
     import navbar_avatar from "./avatar";
     import searchbar from "./searchbar";
 

@@ -4,8 +4,7 @@
             mode="out-in"
             appear>
         <van-image
-                v-if="!this.$store.state.user.token"
-                @click="to_login()"
+                v-if="this.$store.state.user.token"
                 :src="this.$store.state.user.avatar"
                 width="28"
                 height="28"

@@ -1,7 +1,8 @@
 const app = {
     state: {
         SearchBar: false,
-        theme:"hotpink"
+        theme: "hotpink",
+        logo: require("assets/logo.png")
     },
     mutations: {
         SEARCHBAR_TRIGGER(state, payload) {

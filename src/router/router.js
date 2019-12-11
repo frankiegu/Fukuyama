@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const Homepage = () => import('../views/Home_page/Home_page.vue')
-const popular = () => import('../views/Category/fire.vue')
+const popular = () => import('../views/Category/Fire.vue')
 const video = () => import('../views/video/video.vue')
 const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')

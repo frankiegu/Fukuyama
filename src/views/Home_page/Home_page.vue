@@ -14,7 +14,7 @@
         <!--            第一版 很多内容没有填充 更多新内容敬请期待 :-) By - Bwijn-->
         <!--        </van-notice-bar>-->
         <!--todo 主页推荐-->
-
+<HomeRecommendationList></HomeRecommendationList>
     </div>
 </template>
 
@@ -22,6 +22,7 @@
     import Swipe from "./homeComponents/Swipe";
     import Recommendbar from "./homeComponents/Recommendbar";
     import statusbar from 'views/Home_page/homeComponents/latest_status'
+    import HomeRecommendationList from "./homeComponents/HomeRecommendationList";
 
     export default {
         name: "Home_page",
@@ -31,7 +32,7 @@
             // 注册组件 组件标签名: => 组件名
             Swipe
             , Recommendbar
-            , statusbar,
+            , statusbar,HomeRecommendationList
         }
     }
 </script>
