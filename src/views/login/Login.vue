@@ -1,84 +1,92 @@
 <template>
-    <div>
-        <van-cell-group>
-            <van-field
-                    v-model="username"
-                    label="用户名"
-                    placeholder="请输入用户名"
-
-            ></van-field>
-            <van-field
-                    v-model="pwd"
-                    label="密码"
-                    placeholder="请输入密码"
-
-            />
-            <br>
-            <van-row type="flex" justify="center">
-                <van-col span="20">
-                    <van-button size="large" color="#B22222" @click="click_login()">登录</van-button>
-                </van-col>
-            </van-row>
-        </van-cell-group>
+    <!--    todo 改一下ivew的皮肤-->
+    <div style="width: 90%">
+        <Form
+                ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100">
+            <FormItem label="用户名/邮箱" prop="name">
+                <Input v-model="formValidate.name" placeholder="输入用户名/邮箱"></Input>
+            </FormItem>
+            <FormItem label="密码" prop="password">
+                <Input v-model="formValidate.password" placeholder="输入密码"></Input>
+            </FormItem>
+            <FormItem>
+                <Button type="primary" @click="handleSubmit('formValidate')">登入</Button>
+                <Button @click="handleReset('formValidate')" style="margin-left: 8px">清除</Button>
+            </FormItem>
+        </Form>
     </div>
 </template>
-
 <script>
-
-    import {request} from "../../network/request";
-
+    import {Form, FormItem, Input} from 'view-design';
 
     export default {
-        name: "Login",
+        components: {
+            "Form": Form,
+            "FormItem": FormItem,
+            "Input": Input,
+
+        },
         data() {
             return {
-                email: '',
-                username: '',
-                pwd: '',
-                toast: this.$toast
+                formValidate: {
+                    name: '',
+                    password: '',
+                    city: '',
+                    gender: '',
+                    interest: [],
+                    date: '',
+                    time: '',
+                    desc: ''
+                },
+                ruleValidate: {
+                    name: [
+                        {required: true, message: '用户名不能为空~', trigger: 'blur'}
+                    ],
+                    password: [
+                        {required: true, message: '密码不能为空', trigger: 'blur'},
+                    ],
+                    city: [
+                        {required: true, message: 'Please select the city', trigger: 'change'}
+                    ],
+                    gender: [
+                        {required: true, message: 'Please select gender', trigger: 'change'}
+                    ],
+                    interest: [
+                        {
+                            required: true,
+                            type: 'array',
+                            min: 1,
+                            message: 'Choose at least one hobby',
+                            trigger: 'change'
+                        },
+                        {type: 'array', max: 2, message: 'Choose two hobbies at best', trigger: 'change'}
+                    ],
+                    date: [
+                        {required: true, type: 'date', message: 'Please select the date', trigger: 'change'}
+                    ],
+                    time: [
+                        {required: true, type: 'string', message: 'Please select time', trigger: 'change'}
+                    ],
+                    desc: [
+                        {required: true, message: 'Please enter a personal introduction', trigger: 'blur'},
+                        {type: 'string', min: 20, message: 'Introduce no less than 20 words', trigger: 'blur'}
+                    ]
+                }
             }
         },
-        computed: {},
         methods: {
-            click_login() {
-                request({
-                    method: 'post',
-                    url: '/api/auth/login',
-                    data: {
-                        'username': this.username,
-                        'password': this.pwd,
-                    },
-
+            handleSubmit(name) {
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+                        this.$Message.success('Success!');
+                    } else {
+                        this.$Message.error('Fail!');
+                    }
                 })
-                    .then(res => {
-                        console.log(res.data);  // 打印返回数据
-                        localStorage.setItem("userName", res.data.userName);      // 将信息存储到浏览器
-                        localStorage.setItem("userToken", res.data.userSession);
-                        localStorage.setItem("avatar", res.data.avatar)
-                        this.$store.commit("toggle_login", true);      // 调用Vuex改变登录状态
-                        // this.merge()    // 登陆成功跳转
-                    })
-                    .catch(err => {
-                        console.log(err);
-                    });
             },
-
-            merge() {
-                this.toast({
-                    message: '登陆成功',
-                    duration: 1500,
-                });
-
-                setTimeout(fun => {
-                    this.$router.push("/home");
-                }, 1500)
+            handleReset(name) {
+                this.$refs[name].resetFields();
             }
-
-        },
-
+        }
     }
 </script>
-
-<style scoped>
-
-</style>

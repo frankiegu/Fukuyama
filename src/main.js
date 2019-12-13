@@ -6,11 +6,12 @@ import VueLazyload from 'vue-lazyload'
 import Vant from 'vant'
 import 'vant/lib/index.css';
 import vueFeedback from 'vue-feedback'
+import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
 
 Vue.use(vueFeedback)
 
-Vue.config.productionTip = false
-
+Vue.use(ViewUI);
 Vue.use(VueLazyload)
 Vue.use(Vant)
 
@@ -19,3 +20,4 @@ new Vue({
     store: store,
     render: h => h(App),
 }).$mount('#app')
+Vue.config.productionTip = false

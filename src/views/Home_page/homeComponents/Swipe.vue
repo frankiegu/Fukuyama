@@ -1,5 +1,5 @@
 <template>
-    <!--    todo 图片大小问题待解决 尺寸问题-->
+    <!--    todo 轮播图图片大小问题待解决 尺寸自适应问题-->
     <van-swipe :autoplay="3000" :loop="true" indicator-color="hotpink">
         <van-swipe-item v-for="item in images" :key="item.index">
             <div style="position:relative;">
