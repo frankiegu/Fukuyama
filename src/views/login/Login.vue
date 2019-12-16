@@ -3,8 +3,8 @@
     <div style="width: 90%">
         <Form
                 ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100">
-            <FormItem label="用户名/邮箱" prop="name">
-                <Input v-model="formValidate.name" placeholder="输入用户名/邮箱"></Input>
+            <FormItem label="用户名/邮箱" prop="username">
+                <Input v-model="formValidate.username" placeholder="输入用户名/邮箱"></Input>
             </FormItem>
             <FormItem label="密码" prop="password">
                 <Input v-model="formValidate.password" placeholder="输入密码"></Input>
@@ -29,17 +29,12 @@
         data() {
             return {
                 formValidate: {
-                    name: '',
+                    username: '',
                     password: '',
-                    city: '',
-                    gender: '',
-                    interest: [],
-                    date: '',
-                    time: '',
-                    desc: ''
+
                 },
                 ruleValidate: {
-                    name: [
+                    username: [
                         {required: true, message: '用户名不能为空~', trigger: 'blur'}
                     ],
                     password: [
@@ -78,9 +73,23 @@
             handleSubmit(name) {
                 this.$refs[name].validate((valid) => {
                     if (valid) {
-                        this.$Message.success('Success!');
+                        // todo this.$Message.success('成功');
+                        this.$store.dispatch("Get_Token", this.formValidate).then(m => {
+                            const _this = this;
+                            // 登录成功信息
+                            this.$Message.success(
+                                {
+                                    duration: 2.2,
+                                    content: "登陆成功 跳转",
+                                    onClose: function () {
+                                        _this.$router.push('/');
+                                    }
+                                }
+                            );
+                        })
+
                     } else {
-                        this.$Message.error('Fail!');
+                        this.$Message.error('请填写完整');
                     }
                 })
             },

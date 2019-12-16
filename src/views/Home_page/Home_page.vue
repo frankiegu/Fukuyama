@@ -14,7 +14,9 @@
         <!--            第一版 很多内容没有填充 更多新内容敬请期待 :-) By - Bwijn-->
         <!--        </van-notice-bar>-->
         <!--todo 主页推荐-->
-<HomeRecommendationList></HomeRecommendationList>
+        <h3>热门推荐</h3>
+        <HomeRecommendationList></HomeRecommendationList>
+<!--        <Vedio_player></Vedio_player>-->
     </div>
 </template>
 
@@ -23,6 +25,7 @@
     import Recommendbar from "./homeComponents/Recommendbar";
     import statusbar from 'views/Home_page/homeComponents/latest_status'
     import HomeRecommendationList from "./homeComponents/HomeRecommendationList";
+    import Vedio_player from "../../components/common/vedioPlugin/Vedio_player";
 
     export default {
         name: "Home_page",
@@ -32,12 +35,15 @@
             // 注册组件 组件标签名: => 组件名
             Swipe
             , Recommendbar
-            , statusbar,HomeRecommendationList
+            , statusbar, HomeRecommendationList,Vedio_player
         }
     }
 </script>
 
 <style scoped>
+    h3{
+        margin-left: 5%;
+    }
     /*div{*/
     /*    height: 300px;*/
     /*    background-color: red;*/

@@ -1,6 +1,9 @@
 <template>
 
     <div>
+        <van-sticky>
+            <van-cell title="放映厅" is-link to="/"/>
+        </van-sticky>
         <Player></Player>
 
         <!--        视频标题 + 订阅栏 + 视频简介 -->
@@ -21,9 +24,11 @@
             actionbar
         },
         data() {
-            return {
-            }
+            return {}
         },
+        mounted() {
+
+        }
 
     }
 </script>

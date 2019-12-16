@@ -2,7 +2,8 @@
 
     <van-tabbar
             active-color="hotpink"
-            :fixed="true" :border="true" :route="true">
+            :fixed="true" :border="true"
+            route>
 
         <van-tabbar-item
                 replace
@@ -21,7 +22,7 @@
 
         <van-tabbar-item
                 replace
-                to="/search"
+                to="/account"
                 icon="envelop-o"
         >
             收件箱

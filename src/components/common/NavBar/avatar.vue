@@ -1,10 +1,7 @@
 <template>
-    <transition
-            name="slide-fade"
-            mode="out-in"
-            appear>
+    <div>
         <van-image
-                v-if="this.$store.state.user.token"
+                v-show="this.$store.state.user.token"
                 :src="this.$store.state.user.avatar"
                 width="28"
                 height="28"
@@ -13,13 +10,13 @@
 
         <!--            图标空白头像 未登录-->
         <van-icon
-                v-else
+                v-show="!this.$store.state.user.token"
                 name="user-circle-o"
                 size="28"
                 @click="to_login()"
         />
+    </div>
 
-    </transition>
 </template>
 
 <script>

@@ -19,7 +19,7 @@
         <van-popup
                 v-model="show"
                 position="top"
-                :style="{ height: '100px' }"
+                :style="{ height: '50vh' }"
         >
             <searchbar></searchbar>
 
@@ -61,7 +61,7 @@
         watch: {
             // 到看视频的时候关闭顶部导航
             $route(to, from) {
-                if (to.name === "VideoDetail") {
+                if (to.name === "VideoDetail" || to.path ==="/register") {
                     this.show_searchbar(false)
                 }else {
                     this.show_searchbar(true)
