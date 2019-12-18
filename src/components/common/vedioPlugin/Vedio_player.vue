@@ -7,12 +7,13 @@
 <script>
     import 'dplayer/dist/DPlayer.min.css';
     import DPlayer from 'dplayer';
-    import {request} from "../../../network/request";
+    import {Cinema} from "../../../network/video_api";
 
     export default {
         data() {
             return {
-                VideoId: ""
+                VideoId: "",
+                VideoInfo: null,
             }
         },
         methods: {
@@ -20,20 +21,31 @@
         },
 
         mounted() {
-            console.log(this.VideoId = this.$route.params.id);
-            new DPlayer({
-                container: document.getElementById('dplayer'),
-                theme: "hotpink",   // 主题色
-                method: 'get',
-                video: {
-                    url: "http://61.151.170.87/vmtt.tc.qq.com/1098_fba38434c444d4abcfd1ea7ca7435704.f0.mp4?vkey=03985C6295747F0D798ED478058F621DB49B37561FA64962DE1F33A4B41F4B20B304E6796B8A7FCBA471B1268CAC2E97AB399F4BD27230FC0FB73F22DDA03585B022125A4C81FE65015B112A9097F7399585CBF4EBD87E83",
-                    pic: require("assets/Logo_YouTuba-100-480x250px.png")// 封面
-                    // thumbnails: this.$store.state.video.pic,   // 缩略图
-                },
+
+            // api 请求视频详情
+            Cinema.GetVideoDetail(this.$route.params.id).then(m => {
+
+                // 将返回的数据分别存入本组件data 和 Vuex app.js module
+                this.VideoInfo = m.data;
+                this.$store.commit("SET_VIDEODATA", this.VideoInfo);
+
+
+                new DPlayer({
+                    container: document.getElementById('dplayer'),
+                    theme: "hotpink",   // 主题色
+                    method: 'get',
+                    video: {
+                        url: this.VideoInfo.url,
+                        pic: this.VideoInfo.pic// 封面
+                        // thumbnails: this.$store.state.video.pic,   // 缩略图
+                    },
+                })
+
             })
 
 
-        }
+        },
+
 
     }
 </script>

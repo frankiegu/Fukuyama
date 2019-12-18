@@ -51,7 +51,7 @@
             }
         }, methods: {},
         created() {
-            console.log(typeof this.images[1]);
+            // console.log(typeof this.images[1]);
         }
     }
 </script>

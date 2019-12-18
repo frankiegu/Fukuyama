@@ -54,7 +54,6 @@
             }
         },
         mounted() {
-            console.log(this.images[0]);
         }
     }
 </script>

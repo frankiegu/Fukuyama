@@ -1,29 +1,54 @@
 <template>
-    <van-grid square :border="false" icon-size="30" gutter="60" :column-num="3" style="height: 50px">
+    <van-grid icon-size="18" clickable center :border="false" :column-num="2">
         <van-grid-item
-                v-for="value in rewardslist"
-                :key="value"
-                text="123"
+                icon="good-job"
+                :text="VideoInfo.like"
+                @click="ClickLike()"
         >
-            <van-icon size="22" color="#8f8f8f" :name="value" slot="icon"/>
+            <van-icon slot="icon" :color="GoodJob" size="18" name="good-job"/>
         </van-grid-item>
-    </van-grid>
 
+        <!--        示例-->
+        <!--        <van-grid :column-num="2">-->
+        <!--            <van-grid-item icon="home-o" text="文字" dot />-->
+        <!--            <van-grid-item icon="search" text="文字" info="99+" />-->
+        <!--        </van-grid>-->
+
+        <van-grid-item
+                text="保存"
+                icon="add-square"
+        >
+        </van-grid-item>
+
+    </van-grid>
 </template>
 
 <script>
 
     export default {
         name: "rewards",
-        components: {
-        },
+        components: {},
         data() {
             return {
-                rewardslist: [
-                    "good-job",
-                    "share",
-                    "add-square",
-                ]
+                // 拇指颜色
+                GoodJob: ""
+            }
+        },
+        methods: {
+            ClickLike() {
+                if (!this.GoodJob) {
+                    this.GoodJob = "hotpink"
+                } else {
+                    this.GoodJob = ""
+                }
+            }
+        },
+        computed: {
+            /**
+             * @return {null}
+             */
+            VideoInfo() {
+                return this.$store.state.app.VideoData
             }
         }
     }

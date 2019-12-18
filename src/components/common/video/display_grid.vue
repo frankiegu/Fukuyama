@@ -31,8 +31,6 @@
 
 <script>
     import author_avatar from "./author_avatar";
-    import {request} from "../../../network/request";
-    import {List, Grid, GridItem, Image, Cell} from 'vant'
 
     export default {
         data() {
@@ -52,59 +50,11 @@
                 ]
             }
         },
-        methods: {
-            openvideo() {
-                this.$router.push("/video/1")
-            },
-
-            loadvideo() {//分页加载视频
-                request({
-                    method: 'get',
-                    url: '/api/video?page=' + this.current_page// 填video接口 + "?page={{current_page}}"
-                }).then(res => { // 获取成功
-                    let data = res.data;
-                    this.list.push(data[0]);// 向list里存放数据
-                    if (data[1]) {
-                        this.list.push(data[1]);
-                    }
-                    this.current_page++;
-                    this.loading = false;
-
-                    // 打印后端数据
-                    for (let i = 0; i < data.length; i++) {
-                        console.log(data[i])
-                    }
-                }).catch(err => {   // 这代表着数据取完了 把状态设置成完成
-                    this.finished = true;
-                    this.loading = false;
-
-                })
-            }
-        },
+        methods: {},
         components: {
-            [List.name]: List,
-            [GridItem.name]: GridItem,
-            [Grid.name]: Grid,
-            [Cell.name]: Cell,
-            [Image.name]: Image,
             author_avatar,
         },
-        computed: {
-            // 视频详情地址 拼接
-            fullurl() {
-                return function (id) {
-                    return "/video/" + id
-                }
-            },
-            videoinfo() {
-                return function (name, count, time) {
-                    // let time1 = time.split("-")[0] + time.split("-")[1] + time.split("-")[2].split("T")[0];
-                    // console.log(time1);
-                    return name + " · " + count + "次观看" + " · " + time + "天前"
-                }
-            }
-
-        }
+        computed: {}
     }
 </script>
 

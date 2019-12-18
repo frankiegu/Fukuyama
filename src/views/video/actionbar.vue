@@ -4,24 +4,22 @@
             title
             avatar
             :row="10"
-            :loading="loading"
-    >
+            :loading="loading">
 
         <div>
             <!--        Title-->
-            <van-cell :border="false" :center="true" title="我是标题" label="111次观看">
+            <van-cell :border="false" :center="true" :title="this.VideoTitle" :label="this.plays">
             </van-cell>
             <!--        按赞栏-->
             <rewards></rewards>
             <!--        Author栏-->
             <van-cell
-                    title="作者名"
-                    label="111 位订阅者"
+                    :title="this.$store.state.app.VideoData.author.nickname"
+                    :label="Subscriptions"
                     :center="true"
-                    style="border: red"
             >
                 <author_avatar
-                        src="http://122.51.25.188/images/timg%20(2).jpg"
+                        :src="this.$store.state.app.VideoData.author.avatar"
                         style="margin-top: 5px;"
                         slot="icon">
                 </author_avatar>
@@ -42,37 +40,55 @@
     import rewards from "./rewards";
     import brief from "./brief";
     import autovideo from "./autovideo";
-    import {Skeleton, Cell,} from 'vant'
-    import {request} from "../../network/request";
 
     export default {
         name: "actionbar",
         data() {
             return {
                 activeNames: ['2'],
-                loading: true
-
+                loading: true,
             };
         },
         components: {
-            [Skeleton.name]: Skeleton,
-            [Cell.name]: Cell,
             author_avatar,
             rewards,
             brief,
             autovideo
         },
+        computed: {
+            // 播放量
+            plays: function () {
+                return (this.$store.state.app.VideoData.view_count / 10000).toFixed(1) + "万" + " " + "播放"
+            },
+
+            // Title
+            VideoTitle: function () {
+                return this.$store.state.app.VideoData.title
+            },
+
+            // 订阅数
+            Subscriptions() {
+                return this.$store.state.app.VideoData.author.id
+            }
+
+
+        },
         mounted() {
             // 骨架屏
             setTimeout(() => {
                 this.loading = false
-            }, 2000);
+            }, 1)
 
-            // 加载视频数据
-            request({       // axios异步加载数据
-                method: 'get',
-                url: '/api/video/' + this.id,
-            })
+
+        },
+        methods: {
+            /**
+             * @return {string}
+             */
+            VCount(val) {
+                // return (val / 10000).toFixed(1) + "万"
+
+            },
 
 
         }

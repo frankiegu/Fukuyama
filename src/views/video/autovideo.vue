@@ -2,7 +2,7 @@
     <div>
         <van-cell-group>
 
-            <van-cell title="" label="Recommended"/>
+            <van-cell title="" label="为你推荐"/>
 
 
             <!--            <van-row>-->
