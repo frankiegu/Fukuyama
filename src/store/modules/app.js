@@ -43,6 +43,17 @@ const app = {
         },
 
 
+        // 点赞
+        PLUS_ONE_GOOD_JOG(state) {
+            state.VideoData.likenum++;
+        },
+        // 取消点赞
+        MINUS_ONE(state) {
+            state.VideoData.likenum--;
+
+        }
+
+
     },
 
     getters: {
@@ -73,8 +84,20 @@ const app = {
                 // 将值返回 然后组件调用
                 return m
             })
-        }
+        },
 
+
+        // 点赞操作api请求
+        LikeAction({commit, state, getters}, payload) {
+            return request({
+                url: '/api/ulike/',
+                method: 'post',
+                data: payload
+            }).then(m => {
+                console.log(m);
+                return m
+            })
+        }
     }
 }
 export default app

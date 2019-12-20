@@ -2,7 +2,7 @@
     <div>
         <van-image
                 v-show="this.$store.state.user.token"
-                :src="this.$store.state.user.avatar"
+                :src="avatar"
                 width="28"
                 height="28"
                 round
@@ -33,11 +33,17 @@
                 show: true,
             }
         },
+        watch: {},
         computed: {
             isLogin: function () {  // 返回Vuex中的登录状态
                 // console.log('token::::::::::::' + this.$store.state.user.token);
                 // console.log(this.$route.router);
                 return this.$store.state.user.token
+            },
+
+            // todo 登录完成后立刻变化头像不用刷新
+            avatar: function () {
+                return localStorage.getItem('avatar')
             }
         },
         methods: {

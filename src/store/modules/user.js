@@ -19,7 +19,11 @@ const user = {
         }
     },
 
-    mutations: {},
+    mutations: {
+        SET_AVATAR(state){
+
+        }
+    },
 
     actions: {
         // 用户名登录
@@ -32,6 +36,7 @@ const user = {
                 localStorage.setItem("token", res.data.token)
                 // 设置头像地址
                 localStorage.setItem('avatar', res.data.avatar)
+                localStorage.setItem('user_id', res.data.user_id)
             })
         },
 

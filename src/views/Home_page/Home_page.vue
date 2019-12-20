@@ -15,7 +15,7 @@
         <!--        </van-notice-bar>-->
         <h3>热门推荐</h3>
         <HomeRecommendationList></HomeRecommendationList>
-
+        <van-button type="primary">主要按钮</van-button>
     </div>
 </template>
 

@@ -2,7 +2,7 @@
     <van-grid icon-size="18" clickable center :border="false" :column-num="2">
         <van-grid-item
                 icon="good-job"
-                :text="VideoInfo.like"
+                :text="VideoInfo.likenum"
                 @click="ClickLike()"
         >
             <van-icon slot="icon" :color="GoodJob" size="18" name="good-job"/>
@@ -38,8 +38,14 @@
             ClickLike() {
                 if (!this.GoodJob) {
                     this.GoodJob = "hotpink"
+
+                    this.$store.dispatch("LikeAction", {user_id: 1, video_id: 3})
+
+                    // 点赞数加一
+                    this.$store.commit("PLUS_ONE_GOOD_JOG")
                 } else {
-                    this.GoodJob = ""
+                    this.GoodJob = "";
+                    this.$store.commit("MINUS_ONE")
                 }
             }
         },

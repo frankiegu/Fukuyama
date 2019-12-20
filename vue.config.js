@@ -17,8 +17,8 @@ module.exports = {
             less: {
                 // todo 修改主题问题待解决
                 modifyVars: {
-                    "button-primary-background-color": "#0099ff",
-                    "button-primary-border-color": "#0099ff",
+                    "button-primary-background-color": "#000",
+                    "button-primary-border-color": "#000",
                     "button-default-height": "36px",
                     "button-default-line-height": "34px"
                 }
