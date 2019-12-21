@@ -43,7 +43,7 @@
 
             // todo 登录完成后立刻变化头像不用刷新
             avatar: function () {
-                return localStorage.getItem('avatar')
+                return this.$store.state.user.avatar
             }
         },
         methods: {

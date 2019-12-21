@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <!--        轮播图-->
         <Swipe></Swipe>
         <!--        推荐宫格-->
@@ -15,7 +16,7 @@
         <!--        </van-notice-bar>-->
         <h3>热门推荐</h3>
         <HomeRecommendationList></HomeRecommendationList>
-        <van-button type="primary">主要按钮</van-button>
+
     </div>
 </template>
 

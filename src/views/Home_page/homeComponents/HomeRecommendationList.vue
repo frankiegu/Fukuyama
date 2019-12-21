@@ -60,6 +60,9 @@
         computed: {
 
             // 从Vuex获取的列表
+            /**
+             * @return {number}
+             */
             ListVuex() {
                 // console.log(this.$store.state.app.VList);
                 return this.$store.state.app.VList;
@@ -109,7 +112,13 @@
              * @return {string}
              */
             VCount(val) {
-                return (val/10000).toFixed(1) + "万"
+                return (val / 10000).toFixed(1) + "万"
+            },
+
+
+            // 设置全部视频总数 方便视频ranking请求标记
+            VListCount() {
+                return this.$store.state.app.VListCount;
             }
 
         },

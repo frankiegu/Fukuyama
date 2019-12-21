@@ -10,7 +10,8 @@ export function request(config) {
         withCredentials: true,
         // timeout: 5000,
     })
-    instance.defaults.headers.common['Authorization'] = localStorage.key("token");
-
+    instance.defaults.headers.common['Authorization'] = 'JWT ' + localStorage.getItem("token");
+    // console.log(instance.defaults.headers.common['Authorization']);
+    // console.log(localStorage.getItem('token'));
     return instance(config)
 }

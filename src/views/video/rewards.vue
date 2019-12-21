@@ -5,7 +5,8 @@
                 :text="VideoInfo.likenum"
                 @click="ClickLike()"
         >
-            <van-icon slot="icon" :color="GoodJob" size="18" name="good-job"/>
+            <van-icon
+                    slot="icon" :color="ButtonColor" size="18" name="good-job"/>
         </van-grid-item>
 
         <!--        示例-->
@@ -31,30 +32,33 @@
         data() {
             return {
                 // 拇指颜色
-                GoodJob: ""
+                // GoodJob: this.IsLiked === "liked" ? 'hotpink' : ''
             }
         },
         methods: {
             ClickLike() {
-                if (!this.GoodJob) {
-                    this.GoodJob = "hotpink"
-
-                    this.$store.dispatch("LikeAction", {user_id: 1, video_id: 3})
-
-                    // 点赞数加一
-                    this.$store.commit("PLUS_ONE_GOOD_JOG")
-                } else {
-                    this.GoodJob = "";
-                    this.$store.commit("MINUS_ONE")
+                // 状态为 0 时才能点赞
+                if (!this.VideoInfo.is_liked) {     // 点赞异步请求
+                    this.$store.dispatch("LikeAction", {video: this.VideoInfo.id})
                 }
+
             }
         },
         computed: {
             /**
              * @return {null}
+             * 返回视频详情
              */
+
             VideoInfo() {
                 return this.$store.state.app.VideoData
+            },
+
+            /**
+             * @return {string}
+             */
+            ButtonColor() {
+                return this.VideoInfo.is_liked ? 'hotpink' : ''
             }
         }
     }

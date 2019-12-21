@@ -15,6 +15,8 @@ const app = {
         next: '/api/homerecommend/?page=1',
         previous: "",
         VList: [],
+        VListCount: 0,
+
 
     },
     mutations: {
@@ -51,6 +53,16 @@ const app = {
         MINUS_ONE(state) {
             state.VideoData.likenum--;
 
+        },
+
+        // 设置全部视频总数 方便视频ranking请求标记
+        SET_COUNT(state, payload) {
+            state.VListCount = payload;
+        },
+
+        // 设置点赞状态 liked & unlike
+        SET_LIKESTATE(state) {
+            state.VideoData.is_liked = 1 // 1是代表已点赞
         }
 
 
@@ -78,6 +90,9 @@ const app = {
                 // 添加渲染列表
                 commit("ADD_LIST", m.data.results)
 
+                // 设置全部视频总数 方便视频ranking请求标记
+                commit("SET_COUNT", m.data.count)
+
                 // 成功后设置下一页
                 commit("UPDATE_NEXT_URL", m.data.next)
 
@@ -90,10 +105,12 @@ const app = {
         // 点赞操作api请求
         LikeAction({commit, state, getters}, payload) {
             return request({
-                url: '/api/ulike/',
+                url: '/api/video/' + payload.video + '/likeaction/',
                 method: 'post',
                 data: payload
             }).then(m => {
+                commit("SET_LIKESTATE");
+                commit("PLUS_ONE_GOOD_JOG")
                 console.log(m);
                 return m
             })

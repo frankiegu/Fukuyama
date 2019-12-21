@@ -15,7 +15,7 @@
             <!--        Author栏-->
             <van-cell
                     :title="this.$store.state.app.VideoData.author.nickname"
-                    :label="Subscriptions"
+                    :label="Subscriptions + ' 位订阅者'"
                     :center="true"
             >
                 <author_avatar
