@@ -2,6 +2,8 @@
 
 项目地址 ：  http://www.bwijn.xyz/ 
 
+api地址：	 http://api.bwijn.xyz/ 
+
 一个仿youtube的移动端app 基于vue2.x + django rest framework  rest framework-JWT 开发
 
 (主题已改为粉色 仿某哔哩     油管和某哩的混合体    (逃  )
