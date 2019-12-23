@@ -1,4 +1,5 @@
 module.exports = {
+
     configureWebpack: {
         resolve: {
             alias: {
@@ -11,7 +12,6 @@ module.exports = {
             } // 别名配置
         }
     },
-    productionSourceMap: process.env.NODE_ENV === "development" || argv.env === "dev",
     css: {
         loaderOptions: {
             less: {

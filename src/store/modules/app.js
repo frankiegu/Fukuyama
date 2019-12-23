@@ -5,7 +5,7 @@ const app = {
     state: {
         SearchBar: false,
         theme: "hotpink",
-        logo: require("assets/Logo_YouTuba-100-480x250px.png"),
+        logo: 'http://cdn.wuzhongyin.com/Logo_YouTuba-100-480x250px.png',
 
 
         // 当前观看的视频的详细信息
