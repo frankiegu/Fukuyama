@@ -2,6 +2,10 @@
 
 一个仿youtube的移动端app 基于vue2.x + django rest framework  rest framework-JWT 开发
 
+(主题已改为粉色 仿某哔哩     油管和某哩的混合体    (逃  )
+
+##### 文档由易文档托管  多人开发协作 方便后期维护  https://easydoc.xyz/#/ 
+
 ## 项目展示
 
 - 推荐页
@@ -54,7 +58,7 @@
 ### 待开发
 
 1. 二级分类
-2. 
+2. 按赞视频保存 
 
 ### setup
 
@@ -73,4 +77,5 @@ npm run serve
 ```
 npm run build
 ```
+
 
