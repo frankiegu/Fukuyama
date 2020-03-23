@@ -7,10 +7,10 @@
                     width="90"
                     :src="this.$store.state.app.logo"
             />
-            <!--头像-->
+
             <van-icon v-fb slot="right-icon" @click="showPopup" name="search" size="28"/>
 
-            <navbar_avatar slot="right-icon"></navbar_avatar>
+<!--            <navbar_avatar slot="right-icon"></navbar_avatar>-->
 
 
         </van-cell>
