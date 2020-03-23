@@ -1,32 +1,8 @@
 <template>
     <van-sticky>
-        <van-cell clickable v-show="SearchBar">
-            <van-image
-                    v-fb
-                    height="32"
-                    width="90"
-                    :src="this.$store.state.app.logo"
-            />
-
-            <van-icon v-fb slot="right-icon" @click="showPopup" name="search" size="28"/>
-
-<!--            <navbar_avatar slot="right-icon"></navbar_avatar>-->
-
-
+        <van-cell center value="" label="Youtube的弟弟" >
+            <h3 slot="title" style="color: hotpink">Youtuba</h3>
         </van-cell>
-
-
-        <van-popup
-                v-model="show"
-                position="top"
-                :style="{ height: '50vh' }"
-        >
-            <searchbar></searchbar>
-
-        </van-popup>
-
-
-        <!-- 图标位置 -->
 
     </van-sticky>
 </template>
@@ -61,9 +37,9 @@
         watch: {
             // 到看视频的时候关闭顶部导航
             $route(to, from) {
-                if (to.name === "VideoDetail" || to.path ==="/register") {
+                if (to.name === "VideoDetail" || to.path === "/register") {
                     this.show_searchbar(false)
-                }else {
+                } else {
                     this.show_searchbar(true)
                 }
             },
@@ -73,12 +49,7 @@
 </script>
 
 <style scoped>
-    i {
-        float: right;
-        padding-left: 10px;
-        padding-right: 10px;
-        /*background-color: chartreuse;*/
-    }
+
 
 
 </style>

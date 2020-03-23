@@ -2,7 +2,6 @@ import axios from 'axios'
 
 export function request(config) {
     const instance = axios.create({
-        // todo 上线的时候改成服务器地址
         // baseURL: 'http:///api.bwijn.xyz',
         baseURL: 'http://127.0.0.1:8000/',
         method: 'post',

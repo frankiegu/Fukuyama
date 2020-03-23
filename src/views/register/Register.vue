@@ -1,5 +1,4 @@
 <template>
-    <!--    todo 添加邮箱验证码-->
     <div>
         <van-cell title="注册" is-link to="/"/>
         <div style="width: 90%; margin:auto;">
@@ -90,7 +89,6 @@
                                 }
                             );
                         })
-                        // todo this.$Message.success('Success!');
                     } else {
                         this.$Message.error('Fail!');
                     }

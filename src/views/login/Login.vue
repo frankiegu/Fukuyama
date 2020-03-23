@@ -37,7 +37,10 @@
             onSubmit(values) {
 
                 this.$store.dispatch("Get_Token", values).then(m => {
-                    // const _this = this;
+
+                    // 成功跳转到账号页面 account
+                    this.$router.push("/account");
+
                 })
             }
 

@@ -15,7 +15,6 @@ module.exports = {
     css: {
         loaderOptions: {
             less: {
-                // todo 修改主题问题待解决
                 modifyVars: {
                     "button-primary-background-color": "#000",
                     "button-primary-border-color": "#000",

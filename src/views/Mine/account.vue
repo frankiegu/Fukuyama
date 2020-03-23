@@ -1,9 +1,13 @@
 <template>
     <div>
-        <van-cell to="/" title="帐号" is-link size="large" :border="false"/>
+
+        <!--        如果state.token 有 token值就是用户头像 反之就是默认头像和未登录提示-->
         <van-collapse v-model="activeNames" :border="false">
-            <van-collapse-item :border="false" size="large" title="Bwijn" label="779805126@qq.com" name="1">
+            <van-collapse-item v-if="this.$store.state.user.token" :border="false" size="large" title="Bwijn"
+                               label="779805126@qq.com" name="1">
                 <van-image
+                        @click="GotoInfo()"
+
                         round
                         slot="icon"
                         width="50"
@@ -12,74 +16,28 @@
                         src="https://img.yzcdn.cn/vant/cat.jpeg"
                 />
             </van-collapse-item>
+
+            <van-collapse-item v-else :border="false" size="large" title="请登录"
+                               name="2">
+
+
+                <van-image
+                        @click="GotoLogin"
+                        round
+                        slot="icon"
+                        width="50"
+                        height="50"
+                        fit="cover"
+                        src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1584937690&di=dc3698a2f2b7ad72354d02f6fe31a6af&src=http://hbimg.b0.upaiyun.com/1e2e62e6f57458ca32394a10211a9616498d25bd5459-K2uzdk_fw658"
+                />
+            </van-collapse-item>
+
         </van-collapse>
 
-        <van-divider :style="{ color: '#9b9c9d', borderColor: '#9b9c9d', padding: '0' }">
-        </van-divider>
 
-        <van-cell title="您的频道" :border="false" :center="true"
-                  title-style="margin-left: 10px " clickable>
-            <van-icon size="20" name="contact" slot="icon"
-                      style="margin-right: 10px; margin-left: 10px;"
-                      color="#8f8f8f"/>
-        </van-cell>
-        <van-cell clickable title="观看时长" :border="false" :center="true"
-                  title-style="margin-left: 10px ">
-            <van-icon  size="20" name="todo-list" slot="icon"
-                      style="margin-right: 10px; margin-left: 10px;"
-                      color="#8f8f8f"/>
-        </van-cell>
-
-        <van-cell clickable title="订阅Youtuba Premium" :border="false" :center="true"
-                  title-style="margin-left: 10px ">
-            <van-icon size="20" name="gem" slot="icon"
-                      style="margin-right: 10px; margin-left: 10px;"
-                      color="#8f8f8f"/>
-        </van-cell>
-
-        <van-cell clickable title="付费会员" :border="false" :center="true"
-                  title-style="margin-left: 10px ">
-            <van-icon size="20" name="gold-coin" slot="icon"
-                      style="margin-right: 10px; margin-left: 10px;"
-                      color="#8f8f8f"/>
-        </van-cell>
-
-        <van-cell clickable title="切换账号" :border="false" :center="true"
-                  title-style="margin-left: 10px ">
-            <van-icon size="20" name="exchange" slot="icon"
-                      style="margin-right: 10px; margin-left: 10px;"
-                      color="#8f8f8f"/>
-        </van-cell>
-
-        <van-cell clickable title="开启无痕模式" :border="false" :center="true"
-                  title-style="margin-left: 10px ">
-            <van-icon size="20" name="browsing-history" slot="icon"
-                      style="margin-right: 10px; margin-left: 10px;"
-                      color="#8f8f8f"/>
-        </van-cell>
-
-        <van-divider :style="{ color: '#9b9c9d', borderColor: '#9b9c9d', padding: '0' }">
-        </van-divider>
-
-        <van-cell clickable title="设置" :border="false" :center="true"
-                  title-style="margin-left: 10px ">
-            <van-icon size="20" name="setting" slot="icon"
-                      style="margin-right: 10px; margin-left: 10px;"
-                      color="#8f8f8f"/>
-        </van-cell>
-
-        <van-cell clickable title="帮助和反馈" :border="false" :center="true"
-                  title-style="margin-left: 10px ">
-            <van-icon size="20" name="question" slot="icon"
-                      style="margin-right: 10px; margin-left: 10px;"
-                      color="#8f8f8f"/>
-        </van-cell>
-        <van-row type="flex" justify="center">
-            <van-col span="6">
-                <div style="margin: 0 auto;font-size: 12px;position: absolute;bottom: 0;color: pink ">隐私权政策·服务条款</div>
-            </van-col>
-        </van-row>
+        <router-view></router-view>
     </div>
+
 </template>
 
 <script>
@@ -89,12 +47,19 @@
             return {
                 activeNames: ['1']
             };
+        },
+        methods: {
+            GotoLogin() {
+                this.$router.push('/login')
+                // console.log("asdf");
+            },
+            GotoInfo() {
+                this.$router.push("/account/info")
+            }
         }
     }
 </script>
 
 <style scoped>
-    .van-image {
-        margin-right: 10px;
-    }
+
 </style>

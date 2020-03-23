@@ -8,7 +8,7 @@ export const User = {
     // 登录获取token请求
     // params 传入请求参数
     login(params) {
-        console.log(params);
+        console.log("Network User login -- ",params);
 
 
         return request({

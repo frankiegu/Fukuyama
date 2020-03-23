@@ -1,19 +1,15 @@
 <template>
-    <!--    todo 轮播图图片大小问题待解决 尺寸自适应问题-->
     <van-swipe :autoplay="3000" :loop="true" indicator-color="hotpink">
         <van-swipe-item v-for="item in images" :key="item.index">
             <div style="position:relative;">
                 <van-image
-                        style="margin-right: 3px; margin-left: 3px;"
                         radius="5px"
                         lazy-load
-                        fit="fill"
+                        fit="contain"
                         :src="item.url"
                         height="33vh"
                 />
-                <div id="font" style="position:absolute;z-indent:2;top:80%;left:40%;">
-                    {{item.title}}
-                </div>
+
             </div>
 
         </van-swipe-item>

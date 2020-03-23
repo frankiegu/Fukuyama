@@ -41,7 +41,6 @@
                 return this.$store.state.user.token
             },
 
-            // todo 登录完成后立刻变化头像不用刷新
             avatar: function () {
                 return this.$store.state.user.avatar
             }

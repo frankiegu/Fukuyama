@@ -2,17 +2,17 @@
 
     <div id="app">
         <!--        顶部导航栏-->
-        <NavBar v-if="this.$route.path !== '/account'"></NavBar>
+        <NavBar></NavBar>
 
         <!--        大View 主要有3个视图 home fire mine -->
         <!--        另还有 account login register-->
         <transition name="fade" mode="out-in">
             <!--            这里使用了过渡路由 使路由效果过渡自然-->
-            <router-view style="padding-bottom: 50px;"></router-view>
+            <router-view></router-view>
         </transition>
 
         <!--        tabbar 底部导航栏-->
-        <tabbar v-if="this.$route.path !== '/account'"></tabbar>
+        <tabbar></tabbar>
     </div>
 </template>
 

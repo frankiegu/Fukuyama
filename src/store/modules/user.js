@@ -40,7 +40,7 @@ const user = {
             // 在api文件里调用请求接口
             // console.log('*********************');
             return User.login(payload).then(res => {
-                console.log(res);
+                console.log("GetToken -- from user actions ",res);
                 // 设置token值 存储在localstorage里面
                 localStorage.setItem("token", res.data.token)
                 // 设置头像地址
