@@ -1,6 +1,5 @@
 <template>
     <div>
-        <van-cell title="注册" is-link to="/"/>
         <div style="width: 90%; margin:auto;">
             <br>
             <Form ref="formInline" :model="formInline" :rules="ruleInline">

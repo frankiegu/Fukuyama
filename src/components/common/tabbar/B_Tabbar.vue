@@ -22,7 +22,7 @@
 
         <van-tabbar-item
                 replace
-                to="/account"
+                to="/account/func"
                 icon="envelop-o"
         >
             收件箱

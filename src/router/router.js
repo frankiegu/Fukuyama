@@ -9,8 +9,8 @@ const video = () => import('../views/video/video.vue')
 const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')
 const register = () => import('../views/register/Register.vue')
+const accountFunc = () => import('../views/Mine/account-func')
 const account = () => import('../views/Mine/account.vue')
-const search = () => import('../views/Mine/account.vue')
 const accountInfo = () => import('../views/Mine/account-info');
 
 
@@ -60,15 +60,18 @@ const router = new Router({
         },
         {
             path: '/account',
-            name:'account',
+            name: 'account',
             component: account,
             children: [
                 {
                     path: 'info',//以“/”开头的嵌套路径会被当作根路径，所以子路由上不用加“/”;在生成路由时，主路由上的path会被自动添加到子路由之前，所以子路由上的path不用在重新声明主路由上的path了。
                     name: 'info',
-                    component:accountInfo,
+                    component: accountInfo,
                 }
-
+                , {
+                    path: 'func',//账号详细功能 eg: 设置、premium
+                    component: accountFunc,
+                }
             ]
         }
     ]

@@ -3,7 +3,7 @@
 
         <!--        如果state.token 有 token值就是用户头像 反之就是默认头像和未登录提示-->
         <van-collapse v-model="activeNames" :border="false">
-            <van-collapse-item v-if="this.$store.state.user.token" :border="false" size="large" title="Bwijn"
+            <van-collapse-item v-if="this.$store.state.user.token" :border="false" size="large" :title="this.$store.state.user.username"
                                label="779805126@qq.com" name="1">
                 <van-image
                         @click="GotoInfo()"
@@ -13,7 +13,7 @@
                         width="50"
                         height="50"
                         fit="cover"
-                        src="https://img.yzcdn.cn/vant/cat.jpeg"
+                        :src="this.$store.state.user.avatar"
                 />
             </van-collapse-item>
 

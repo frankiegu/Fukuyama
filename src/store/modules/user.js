@@ -8,7 +8,7 @@ const user = {
         code: '',
         token: localStorage.getItem('token'),
         name: '',
-        username: '',
+        username: localStorage.getItem('username'),
         id: localStorage.getItem('user_id'),
         avatar: localStorage.getItem('avatar'),
         introduction: '',
@@ -29,7 +29,7 @@ const user = {
         SET_TOKEN(state, payload) {
             state.token = payload
         },
-        SET_ID(state,payload){
+        SET_ID(state, payload) {
             state.id = payload
         }
     },
@@ -40,12 +40,13 @@ const user = {
             // 在api文件里调用请求接口
             // console.log('*********************');
             return User.login(payload).then(res => {
-                console.log("GetToken -- from user actions ",res);
+                console.log("GetToken -- from user actions ", res);
                 // 设置token值 存储在localstorage里面
                 localStorage.setItem("token", res.data.token)
                 // 设置头像地址
                 localStorage.setItem('avatar', res.data.avatar)
                 localStorage.setItem('user_id', res.data.user_id)
+                localStorage.setItem('username', res.data.username)
 
                 // 立即更新头像 token
                 commit("SET_AVATAR", res.data.avatar)
@@ -57,6 +58,10 @@ const user = {
 
         RegisterUser({commit}, userInfo) {
             return User.register(userInfo)
+        },
+
+        QuitLogin() {
+            localStorage.clear();
         }
     }
 };
