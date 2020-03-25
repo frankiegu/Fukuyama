@@ -1,5 +1,5 @@
 <template>
-    <van-swipe :autoplay="3000" :loop="true" indicator-color="hotpink">
+    <van-swipe :autoplay="3000" :loop="true" indicator-color="white">
         <van-swipe-item v-for="item in images" :key="item.index">
             <div style="position:relative;">
                 <van-image

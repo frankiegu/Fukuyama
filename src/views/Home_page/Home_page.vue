@@ -5,16 +5,7 @@
         <Swipe></Swipe>
         <!--        推荐宫格-->
         <Recommendbar></Recommendbar>
-        <!--        贴照片-->
-        <!--        <statusbar></statusbar>-->
-        <!--        <van-notice-bar-->
-        <!--                color="#1989fa"-->
-        <!--                background="#ecf9ff"-->
-        <!--                left-icon="info-o"-->
-        <!--        >-->
-        <!--            第一版 很多内容没有填充 更多新内容敬请期待 :-) By - Bwijn-->
-        <!--        </van-notice-bar>-->
-        <h3>热门推荐</h3>
+
         <HomeRecommendationList></HomeRecommendationList>
 
     </div>

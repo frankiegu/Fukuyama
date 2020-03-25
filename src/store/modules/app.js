@@ -11,13 +11,6 @@ const app = {
         // 当前观看的视频的详细信息
         VideoData: null,
 
-        // 当前首页推荐状态
-        next: '/api/homerecommend/?page=1',
-        previous: "",
-        VList: [],
-        VListCount: 0,
-
-
     },
     mutations: {
         // 变更状态
@@ -34,14 +27,6 @@ const app = {
         // 更新列表状态
         UPDATE_NEXT_URL(state, payload) {
             state.next = payload
-        },
-        ADD_LIST(state, payload) {
-            // console.log(payload);
-            state.VList.push(payload[0])
-            if (payload[1]) {
-                state.VList.push(payload[1])
-            }
-
         },
 
 
@@ -84,18 +69,9 @@ const app = {
         // 请求首页List
         Ranking({commit, state, getters}, payload) {
             return request({
-                url: state.next,
+                url: 'http://127.0.0.1:8000/api/homerecommend/',
                 method: 'get',
             }).then(m => {
-                // 添加渲染列表
-                commit("ADD_LIST", m.data.results)
-
-                // 设置全部视频总数 方便视频ranking请求标记
-                commit("SET_COUNT", m.data.count)
-
-                // 成功后设置下一页
-                commit("UPDATE_NEXT_URL", m.data.next)
-
                 // 将值返回 然后组件调用
                 return m
             })

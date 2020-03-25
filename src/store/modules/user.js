@@ -62,6 +62,16 @@ const user = {
 
         QuitLogin() {
             localStorage.clear();
+        },
+
+
+        //头像上传
+        upload_avatar(
+            {commit, state}, payload
+        ) {
+            return User.upload_avatar(payload).then(res => {
+                return res
+            })
         }
     }
 };

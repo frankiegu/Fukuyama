@@ -1,11 +1,11 @@
 <template>
 
     <div>
-        <van-sticky>
-            <van-cell style="background-color: #222;" is-link to="/home">
-                <p style="color: hotpink" slot="title">放映厅</p>
-            </van-cell>
-        </van-sticky>
+<!--        <van-sticky>-->
+<!--            <van-cell style="background-color: #222;" is-link to="/home">-->
+<!--                <p style="color: hotpink" slot="title">放映厅</p>-->
+<!--            </van-cell>-->
+<!--        </van-sticky>-->
 
         <!--        播放器-->
         <Player></Player>
