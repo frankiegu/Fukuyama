@@ -1,49 +1,36 @@
 <template>
     <div>
-        <van-tabs type="card">
-            <van-tab title="标签 1">内容 1</van-tab>
-            <van-tab title="动漫">
+        <van-tabs v-model="active" type="card">
+            <van-tab title="日剧" to="/popular/TV"></van-tab>
+
+            <van-tab title="动漫" to="/popular/anime/hot">
 
                 <van-dropdown-menu>
-                    <van-dropdown-item v-model="value2" :options="option2"/>
+                    <van-dropdown-item @change="sortChange" v-model="value2" :options="option2">
+
+                    </van-dropdown-item>
                 </van-dropdown-menu>
 
-                <van-grid :column-num="3">
-                    <van-grid-item
-                            v-for="value in video_list"
-                            :key="value"
-                            text="视频名"
-                    >
-                        <van-image
-                                slot="icon"
-                                width="7em"
-                                height="10em"
-                                src="https://img.yzcdn.cn/vant/cat.jpeg"
-                        />
-                    </van-grid-item>
-                </van-grid>
-
             </van-tab>
-            <van-tab title="标签 3">内容 3</van-tab>
+
+
+            <van-tab title="电影" to="/popular/film">内容 3</van-tab>
         </van-tabs>
+        <keep-alive>
 
+            <router-view></router-view>
+        </keep-alive>
 
-        <!--        分页组件-->
-        <van-pagination
-                v-model="currentPage"
-                :total-items="24"
-                :items-per-page="5"
-        />
     </div>
 
 </template>
 
 <script>
     export default {
+
         data() {
             return {
-                currentPage: 1,
-
+                active: 0,
                 value1: 0,
                 value2: 'a',
                 option1: [
@@ -52,15 +39,28 @@
                     {text: '活动商品', value: 2}
                 ],
                 option2: [
-                    {text: '默认排序', value: 'a'},
-                    {text: '好评排序', value: 'b'},
-                    {text: '销量排序', value: 'c'},
+                    {text: '按热度排序', value: 'a'},
+                    {text: '按时间排序', value: 'b'},
                 ],
 
-                video_list: [1, 34, 1241, 'o', 412, 41, 21412]
             }
         },
-        components: {},
+        methods: {
+
+            sortChange(value) {
+                if (value === 'a') {
+                    this.$router.push('/popular/anime/hot')
+                } else {
+
+                    this.$router.push('/popular/anime/time')
+                }
+
+                console.log(value);
+                //
+            },
+
+
+        }
     }
 </script>
 

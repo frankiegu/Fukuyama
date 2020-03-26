@@ -7,6 +7,7 @@
                     v-for="value in VList1"
                     :key="value.id"
                     :text="value.title"
+                    :to="video_url(value.id)"
             >
                 <video_cover slot="icon" :src="value.cover"></video_cover>
 
@@ -70,6 +71,10 @@
                 });
 
             },
+            // 拼接完整前端videoID -- URL
+            video_url(id) {
+                return "/video/" + id
+            }
 
 
         },

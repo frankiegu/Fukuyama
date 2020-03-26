@@ -69,7 +69,7 @@ const app = {
         // 请求首页List
         Ranking({commit, state, getters}, payload) {
             return request({
-                url: 'http://127.0.0.1:8000/api/homerecommend/',
+                url: 'http://127.0.0.1:8000/api/homerecommend',
                 method: 'get',
             }).then(m => {
                 // 将值返回 然后组件调用

@@ -15,7 +15,7 @@
             </van-tabbar-item>
             <van-tabbar-item
                     replace
-                    to="/popular"
+                    to="/popular/TV"
                     icon="fire"
             >
                 时下流行

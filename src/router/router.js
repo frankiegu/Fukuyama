@@ -12,6 +12,10 @@ const register = () => import('../views/register/Register.vue')
 const accountFunc = () => import('../views/Mine/account-func')
 const account = () => import('../views/Mine/account.vue')
 const accountInfo = () => import('../views/Mine/account-info');
+const AnimeHotList = () => import('../views/Category/category-anime');
+const AnimeTimeList = () => import('../views/Category/category-anime');
+const TVlist = () => import('../views/Category/category-TV');
+const FilmList = () => import('../views/Category/category-film');
 
 
 const MetaInfo = {
@@ -35,6 +39,28 @@ const router = new Router({
             path: '/popular',
             name: 'popular',
             component: popular,
+
+            children: [
+                {
+                    path: 'anime/hot',
+                    component: AnimeHotList,
+
+                },
+                {
+                    path: 'anime/time',
+                    component: AnimeTimeList,
+                },
+                {
+                    path: 'film',
+                    component: FilmList,
+
+                },
+                {
+                    path: 'TV',
+                    component: TVlist,
+
+                }
+            ]
 
         },
         {
