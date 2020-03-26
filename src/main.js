@@ -15,6 +15,9 @@ Vue.use(ViewUI);
 Vue.use(VueLazyload)
 Vue.use(Vant)
 
+// import '@/network/mock'
+
+
 new Vue({
     router,
     store: store,

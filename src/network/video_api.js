@@ -1,6 +1,8 @@
 import {request} from "./request";
 
+// import {request} from './mock'
 // 定义路由
+
 const VIDEODETALL = 'api/video/'
 const ANIMELISTBYHOT = 'api/ranking?category=anime&sort=hot'
 const ANIMELISTBYTIME = 'api/ranking?category=anime&sort=time'
@@ -22,8 +24,6 @@ export const Cinema = { // 放映厅
 
         })
     },
-
-
 
 
 };
