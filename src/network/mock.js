@@ -16,7 +16,7 @@ const postData = req => {
             title: Random.csentence(10, 25), // 随机生成长度为10-25的标题
             icon: Random.dataImage('250x250', '文章icon'), // 随机生成大小为250x250的图片链接
             author: Random.cname(), // 随机生成名字
-            date: Random.date() + ' ' + Random.time() // 随机生成年月日 + 时间
+            date: Random.date() + ' ' + Random.time(), // 随机生成年月日 + 时间
         }
 
         posts.push(post)

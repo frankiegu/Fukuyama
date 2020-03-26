@@ -6,6 +6,7 @@ import {request} from "./request";
 const VIDEODETALL = 'api/video/'
 const ANIMELISTBYHOT = 'api/ranking?category=anime&sort=hot'
 const ANIMELISTBYTIME = 'api/ranking?category=anime&sort=time'
+const HOMELIST = 'api/homerecommend'
 
 export const Cinema = { // 放映厅
     // 视频详情 http://127.0.0.1:8000/api/video/3
@@ -16,14 +17,24 @@ export const Cinema = { // 放映厅
         })
     },
 
-// 动漫按热度排序
-    GetAnimeListByHot() {
+// 动漫列表
+    GetAnimeList(sort) {
+        // 判断视频列表排序
+        let url = sort == 'time' ? ANIMELISTBYTIME : ANIMELISTBYHOT
         return request({
-            url: ANIMELISTBYHOT,
+            url: url,
             method: 'get',
 
         })
     },
 
+    // 首页视频列表 动漫 日剧 电影 通用函数
+    GetHomeRecommendList() {
+        return request({
+            url: HOMELIST,
+            method: 'get',
+
+        })
+    }
 
 };

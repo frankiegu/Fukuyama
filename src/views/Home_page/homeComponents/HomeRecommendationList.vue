@@ -1,41 +1,20 @@
 <template>
     <div>
         <van-cell title="热门推荐" value="今日更新 33 条数据"/>
-        <!--        [热门推荐]-->
-        <van-grid :border="false" :column-num="3">
-            <van-grid-item
-                    v-for="value in VList1"
-                    :key="value.id"
-                    :text="value.title"
-                    :to="video_url(value.id)"
-            >
-                <video_cover slot="icon" :src="value.cover"></video_cover>
 
-            </van-grid-item>
-        </van-grid>
+
+        <home_page_grid></home_page_grid>
 
 
         <van-cell title="日漫" value="今日更新 33 条数据"/>
-        <!--        日漫-->
-        <van-grid :column-num="3">
-            <van-grid-item
-                    v-for="value in VList2"
-                    :key="value"
-                    text="视频名"
-            >
-
-                <!--通用视频封面-->
-                <video_cover slot="icon"
-                             :src="value.cover"></video_cover>
-            </van-grid-item>
-        </van-grid>
-
+        <home_page_grid></home_page_grid>
 
     </div>
 </template>
 
 <script>
     import video_cover from '../../../components/common/video/video-cover'
+    import home_page_grid from "../home_page_grid";
 
     export default {
         name: "HomePageHotRank",
@@ -56,7 +35,8 @@
             this.Request()
         },
         components: {
-            video_cover
+            video_cover,
+            home_page_grid
         },
 
         methods: {

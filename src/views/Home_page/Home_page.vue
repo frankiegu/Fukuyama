@@ -14,7 +14,6 @@
 <script>
     import Swipe from "./homeComponents/Swipe";
     import Recommendbar from "./homeComponents/Recommendbar";
-    import statusbar from 'views/Home_page/homeComponents/latest_status'
     import HomeRecommendationList from "./homeComponents/HomeRecommendationList";
     import Vedio_player from "../../components/common/vedioPlugin/Vedio_player";
 

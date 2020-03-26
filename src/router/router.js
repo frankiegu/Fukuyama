@@ -2,20 +2,26 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
-
+// 基础视图
 const Homepage = () => import('../views/Home_page/Home_page.vue')
 const popular = () => import('../views/Category/Fire.vue')
 const video = () => import('../views/video/video.vue')
 const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')
 const register = () => import('../views/register/Register.vue')
+
+// 个人详细信息
 const accountFunc = () => import('../views/Mine/account-func')
 const account = () => import('../views/Mine/account.vue')
 const accountInfo = () => import('../views/Mine/account-info');
+
+//分类页排序
 const AnimeHotList = () => import('../views/Category/category-anime');
 const AnimeTimeList = () => import('../views/Category/category-anime');
 const TVlist = () => import('../views/Category/category-TV');
 const FilmList = () => import('../views/Category/category-film');
+
+const Details = () => import('../views/video/video-details')
 
 
 const MetaInfo = {
@@ -67,6 +73,12 @@ const router = new Router({
             path: '/video/:id',
             name: "VideoDetail",
             component: video,
+
+        },
+        {
+            path: '/details',
+            name: "details",
+            component: Details,
 
         },
         {

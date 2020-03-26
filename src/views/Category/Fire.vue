@@ -16,9 +16,10 @@
 
             <van-tab title="电影" to="/popular/film">内容 3</van-tab>
         </van-tabs>
-        <keep-alive>
 
-            <router-view></router-view>
+
+        <keep-alive>
+            <router-view :sort="value2"></router-view>
         </keep-alive>
 
     </div>
@@ -31,16 +32,11 @@
         data() {
             return {
                 active: 0,
-                value1: 0,
-                value2: 'a',
-                option1: [
-                    {text: '全部商品', value: 0},
-                    {text: '新款商品', value: 1},
-                    {text: '活动商品', value: 2}
-                ],
+                value2: 'hot',
+
                 option2: [
-                    {text: '按热度排序', value: 'a'},
-                    {text: '按时间排序', value: 'b'},
+                    {text: '按热度排序', value: 'hot'},
+                    {text: '按时间排序', value: 'time'},
                 ],
 
             }
@@ -48,15 +44,12 @@
         methods: {
 
             sortChange(value) {
-                if (value === 'a') {
+                if (value === 'hot') {
                     this.$router.push('/popular/anime/hot')
                 } else {
-
                     this.$router.push('/popular/anime/time')
-                }
 
-                console.log(value);
-                //
+                }
             },
 
 
