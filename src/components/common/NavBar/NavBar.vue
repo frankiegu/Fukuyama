@@ -1,21 +1,24 @@
 <template>
     <van-sticky>
-        <van-cell center value="" label="Youtube的弟弟" >
-            <h3 slot="title" style="color: hotpink">Youtuba</h3>
-        </van-cell>
-
+        <van-search
+                v-model="value"
+                shape="round"
+                background="hotpink"
+                placeholder="请输入搜索关键词"
+        />
     </van-sticky>
 </template>
 
 <script>
     import navbar_avatar from "./avatar";
-    import searchbar from "./searchbar";
 
     export default {
         name: "NavBar",
         data() {
             return {
                 show: false,
+
+                value: ''
             }
         },
         created() {
@@ -25,7 +28,7 @@
                 return this.$store.state.app.SearchBar
             }
         },
-        components: {navbar_avatar, searchbar},
+        components: {navbar_avatar},
         methods: {
             show_searchbar(payload) {      // 搜索框是否展示 状态标志存在Vuex中
                 this.$store.commit("SEARCHBAR_TRIGGER", payload)
@@ -49,7 +52,6 @@
 </script>
 
 <style scoped>
-
 
 
 </style>
