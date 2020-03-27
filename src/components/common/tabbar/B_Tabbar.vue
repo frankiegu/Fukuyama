@@ -16,17 +16,16 @@
             <van-tabbar-item
                     replace
                     to="/popular/TV"
-                    icon="fire"
-            >
-                时下流行
+                    icon="wap-nav"
+            >片单
             </van-tabbar-item>
 
             <van-tabbar-item
                     replace
                     to="/account/func"
-                    icon="envelop-o"
+                    icon="friends"
             >
-                收件箱
+个人
             </van-tabbar-item>
             <van-tabbar-item
                     push

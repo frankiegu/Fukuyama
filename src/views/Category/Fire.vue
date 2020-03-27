@@ -1,6 +1,6 @@
 <template>
     <div>
-        <van-tabs v-model="active" type="card">
+        <van-tabs color="hotpink" v-model="active" type="card">
             <van-tab title="日剧" to="/popular/TV"></van-tab>
 
             <van-tab title="动漫" to="/popular/anime/hot">

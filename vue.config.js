@@ -16,13 +16,14 @@ module.exports = {
         loaderOptions: {
             less: {
                 modifyVars: {
-                    "button-primary-background-color": "#000",
-                    "button-primary-border-color": "#000",
-                    "button-default-height": "36px",
-                    "button-default-line-height": "34px"
-                }
-            }
-        }
-    }
+                    // 直接覆盖变量
+                    'text-color': '#DC143C',
+                    'border-color': '#eee',
+                    'gray-8': '#FF00FF',
+                    'search-left-icon-color': '#8B008B',
+                },
+            },
+        },
+    },
 
 }
