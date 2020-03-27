@@ -3,11 +3,10 @@
         <van-swipe-item v-for="item in images" :key="item.index">
             <div style="position:relative;">
                 <van-image
-                        radius="5px"
                         lazy-load
-                        fit="contain"
                         :src="item.url"
-                        height="33vh"
+
+                        height="10em"
                 />
 
             </div>
@@ -25,11 +24,11 @@
                 current: 0,
                 images: [
                     {
-                        url: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576430557029&di=9e35ce015d3150d07ecf74e0dc8abfc3&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fitbbs%2F1307%2F03%2Fc3%2F22874868_1372820245014_1024x1024it.png",
+                        url: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585223320931&di=57bb03359503b24afd25aaefedb3603e&imgtype=0&src=http%3A%2F%2Fimage.game.uc.cn%2F2014%2F2%2F8%2F9623950.jpg",
                         title: "进击的巨人第一季(2013)"
                     },
                     {
-                        url: "http://cdn.wuzhongyin.com/doctor-x.webp",
+                        url: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=26519325,697600277&fm=11&gp=0.jpg",
                         title: "【日剧】Doctor-X~外科医·大门未知子"
                     },
                     {
