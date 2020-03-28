@@ -10,20 +10,21 @@
                 <video_cover slot="icon" :src="value.cover"></video_cover>
             </van-grid-item>
         </van-grid>
-    </div>
 
+    </div>
 </template>
 
 <script>
-    import {Cinema} from "../../network/video_api";
-    import video_cover from "../../components/common/video/video-cover";
+    import {Cinema} from "../network/video_api";
+    import video_cover from './common/video/video-cover'
+
 
     export default {
-        name: "home_page_grid",
+        name: "category-anime",
         props: ['sort'],
         data() {
             return {
-                anime_video_list: [1],
+                anime_video_list: [1, 34, 1241, 'o', 412, 41, 21412],
                 currentPage: 1,
 
             }
@@ -31,7 +32,7 @@
 
         mounted() {
             // 获取动漫列表 by hot or time
-            Cinema.GetHomeRecommendList().then(res => {
+            Cinema.GetAnimeList(this.sort).then(res => {
                 console.log(res);
                 this.anime_video_list = res.data;
             })
@@ -39,7 +40,7 @@
         methods: {
             // 拼接完整前端videoID -- URL
             video_url(id) {
-                return "/video/" + id
+                return '/details/' + id
             },
 
         },

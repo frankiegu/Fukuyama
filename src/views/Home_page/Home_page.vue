@@ -10,8 +10,8 @@
 </template>
 
 <script>
-    import Swipe from "./homeComponents/Swipe";
-    import HomeRecommendationList from "./homeComponents/HomeRecommendationList";
+    import Swipe from "./Swipe";
+    import HomeRecommendationList from "./HomeRecommendationList";
     import Vedio_player from "../../components/common/vedioPlugin/Vedio_player";
 
     export default {
