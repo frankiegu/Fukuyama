@@ -52,6 +52,7 @@
 <style scoped>
     /*播放器大小设置*/
     #dplayer {
+        margin-top: 1em;
         height: 35vh;
 
     }

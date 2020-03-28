@@ -48,7 +48,7 @@
 
                 ],
                 images2: [
-                    require("../../../assets/braces-img/out-sitting.jpg")
+                    require("../../assets/braces-img/out-sitting.jpg")
 
                 ]
             }

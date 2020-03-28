@@ -26,7 +26,7 @@
             </van-cell>
 
             <!--        视频简介栏-->
-            <brief></brief>
+<!--            <brief></brief>-->
 
             <!--        视频推荐（接下来播放）-->
             <autovideo></autovideo>

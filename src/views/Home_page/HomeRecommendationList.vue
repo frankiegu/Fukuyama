@@ -3,18 +3,17 @@
         <van-cell title="热门推荐" value="今日更新 33 条数据"/>
 
 
-        <home_page_grid></home_page_grid>
-
+        <category_anime></category_anime>
 
         <van-cell title="日漫" value="今日更新 33 条数据"/>
-        <home_page_grid></home_page_grid>
+        <category_anime></category_anime>
 
     </div>
 </template>
 
 <script>
-    import video_cover from '../../../components/common/video/video-cover'
-    import home_page_grid from "../home_page_grid";
+    import video_cover from '../../components/common/video/video-cover'
+    import category_anime from '../../components/category-anime'
 
     export default {
         name: "HomePageHotRank",
@@ -36,7 +35,7 @@
         },
         components: {
             video_cover,
-            home_page_grid
+            category_anime
         },
 
         methods: {
