@@ -16,8 +16,8 @@ const account = () => import('../views/Mine/account.vue')
 const accountInfo = () => import('../views/Mine/account-info');
 
 //分类页排序
-const AnimeHotList = () => import('../views/Category/category-anime');
-const AnimeTimeList = () => import('../views/Category/category-anime');
+const AnimeHotList = () => import('../components/category-anime');
+const AnimeTimeList = () => import('../components/category-anime');
 const TVlist = () => import('../views/Category/category-TV');
 const FilmList = () => import('../views/Category/category-film');
 
@@ -70,13 +70,13 @@ const router = new Router({
 
         },
         {
-            path: '/video/:id',
+            path: '/video/:id/:episode',
             name: "VideoDetail",
             component: video,
 
         },
         {
-            path: '/details',
+            path: '/details/:id',
             name: "details",
             component: Details,
 
