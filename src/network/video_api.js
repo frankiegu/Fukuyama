@@ -4,9 +4,7 @@ import {request} from "./request";
 // 定义路由
 
 const VIDEODETALL = 'api/video/'
-const ANIMELISTBYHOT = 'api/ranking?category=anime&sort=hot'
-const ANIMELISTBYTIME = 'api/ranking?category=anime&sort=time'
-const HOMELIST = 'api/recommend'    //首页热门推荐
+
 const EPISODESLIST = 'api/details/'
 const PLAYERINITIALIZE = 'api/player/'
 const WATCHINFO = 'api/watch/info/'
@@ -27,10 +25,8 @@ export const Cinema = { // 放映厅
         })
     },
 
-    // 动漫列表
-    GetAnimeList(sort) {
-        // 判断视频列表排序
-        let url = sort == 'time' ? ANIMELISTBYTIME : ANIMELISTBYHOT
+    // 获得视频列表 传入url
+    GetAnimeList(url) {
         return request({
             url: url,
             method: 'get',
@@ -73,7 +69,7 @@ export const Cinema = { // 放映厅
         })
     },
 
-    CurrentEpisodeInfo(id){
+    CurrentEpisodeInfo(id) {
         return request({
             url: WATCHINFO + id,
             method: 'get',

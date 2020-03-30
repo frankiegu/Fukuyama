@@ -14,7 +14,7 @@ const app = {
     },
     mutations: {
         // 更新当前观看的视频的信息 INFO
-        SET_videohall(state, payload) {
+        SET_HALL(state, payload) {
             state.videohall = payload
         },
 

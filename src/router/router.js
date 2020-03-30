@@ -49,11 +49,13 @@ const router = new Router({
             children: [
                 {
                     path: 'anime/hot',
+                    name: 'hot',
                     component: AnimeHotList,
 
                 },
                 {
                     path: 'anime/time',
+                    name: 'time',
                     component: AnimeTimeList,
                 },
                 {

@@ -11,8 +11,7 @@
 
 <script>
     import Swipe from "./Swipe";
-    import HomeRecommendationList from "./HomeRecommendationList";
-    import Vedio_player from "../../components/common/vedioPlugin/Vedio_player";
+    import HomeRecommendationList from "./homepage-category";
 
     export default {
         name: "Home_page",
@@ -21,7 +20,7 @@
         components: {
             // 注册组件 组件标签名: => 组件名
             Swipe
-            , statusbar, HomeRecommendationList, Vedio_player
+            , statusbar, HomeRecommendationList
         }
     }
 </script>

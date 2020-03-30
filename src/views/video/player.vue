@@ -7,7 +7,7 @@
 <script>
     import 'dplayer/dist/DPlayer.min.css';
     import DPlayer from 'dplayer';
-    import {Cinema} from "../../../network/video_api";
+    import {Cinema} from "../../network/video_api";
 
     export default {
         data() {
@@ -16,12 +16,12 @@
                 PlayerData: null,
             }
         },
+        props:[],
         methods: {
             // 返回一个播放器实例
         },
 
         mounted() {
-            console.log(this.$route.params);
             // api 请求视频详情
             Cinema.PlayerInitialize(this.$route.params).then(m => {
                 // 将返回的数据存入变量
@@ -48,10 +48,9 @@
 </script>
 <style scoped>
     /*播放器大小设置*/
-    #dplayer {
-        margin-top: 1em;
+    #playercontainer {
+        /*margin-top: 1em;*/
         /*height: 35vh;*/
-
     }
 </style>
 

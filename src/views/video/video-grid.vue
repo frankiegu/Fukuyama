@@ -5,9 +5,9 @@
         <van-grid-item
                 v-for="value in EpisodesList"
                 :key="value.id"
-                :to="{path:'/video/'+id+'/'+value.episode_num}"
+                :to="{path:'/video/'+id+'/'+value.id}"
         >
-            <van-button size="small" slot="default" color="hotpink" type="primary">{{value.name}}
+            <van-button size="small" slot="default" color="hotpink" type="primary">{{value.episode_num}}
             </van-button>
         </van-grid-item>
     </van-grid>
