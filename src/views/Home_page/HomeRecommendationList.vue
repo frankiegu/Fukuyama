@@ -14,6 +14,7 @@
 <script>
     import video_cover from '../../components/common/video/video-cover'
     import category_anime from '../../components/category-anime'
+    import {Cinema} from "../../network/video_api";
 
     export default {
         name: "HomePageHotRank",
@@ -21,8 +22,8 @@
             return {
                 loading: false,
                 finished: false,
-                VList1: [],  // [热门推荐] 视频列表
-                VList2: [1, 2, 3, 4, 5, 6],  // [日漫] 视频列表
+                PopularRecommendList: [],  // [热门推荐] 视频列表
+                JapanAnimeList: [],  // [日漫] 视频列表
                 error: false,
             }
         },
@@ -42,13 +43,9 @@
 
             // 请求推荐列表 -- [热门推荐]
             Request() {
-                this.$store.dispatch("Ranking").then(m => {
-                    this.VList1 = m.data;
-                    console.log(m.data);
-                }).catch(e => {
-                    console.log(e);
-                });
-
+                Cinema.GetPopularRecommendList().then(r => {
+                    this.PopularRecommendList = r.data
+                })
             },
             // 拼接完整前端videoID -- URL
             video_url(id) {

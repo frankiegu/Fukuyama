@@ -3,24 +3,19 @@ import {request} from "../../network/request";
 
 const app = {
     state: {
-        SearchBar: false,
+
         theme: "hotpink",
         logo: 'http://cdn.wuzhongyin.com/Logo_YouTuba-100-480x250px.png',
 
 
         // 当前观看的视频的详细信息
-        VideoData: null,
+        videohall: null,
 
     },
     mutations: {
-        // 变更状态
-        SEARCHBAR_TRIGGER(state, payload) {
-            state.SearchBar = payload
-        },
-
         // 更新当前观看的视频的信息 INFO
-        SET_VIDEODATA(state, payload) {
-            state.VideoData = payload
+        SET_videohall(state, payload) {
+            state.videohall = payload
         },
 
 
@@ -60,22 +55,7 @@ const app = {
     },
 
     actions: {
-        // 获取首页热门推荐List
-        GetHotRecommendation() {
-            return
-        },
 
-
-        // 请求首页List
-        Ranking({commit, state, getters}, payload) {
-            return request({
-                url: '/api/homerecommend',
-                method: 'get',
-            }).then(m => {
-                // 将值返回 然后组件调用
-                return m
-            })
-        },
 
 
         // 点赞操作api请求

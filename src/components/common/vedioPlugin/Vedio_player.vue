@@ -13,7 +13,7 @@
         data() {
             return {
                 VideoId: "",
-                VideoInfo: null,
+                PlayerData: null,
             }
         },
         methods: {
@@ -21,22 +21,19 @@
         },
 
         mounted() {
-
+            console.log(this.$route.params);
             // api 请求视频详情
-            Cinema.GetVideoDetail(this.$route.params.id).then(m => {
-
-                // 将返回的数据分别存入本组件data 和 Vuex app.js module
-                this.VideoInfo = m.data;
-                this.$store.commit("SET_VIDEODATA", this.VideoInfo);
-
+            Cinema.PlayerInitialize(this.$route.params).then(m => {
+                // 将返回的数据存入变量
+                this.PlayerData = m.data;
 
                 new DPlayer({
                     container: document.getElementById('dplayer'),
                     theme: "hotpink",   // 主题色
                     method: 'get',
                     video: {
-                        url: this.VideoInfo.url,
-                        pic: this.VideoInfo.pic// 封面
+                        url: this.PlayerData.url,
+                        pic: this.PlayerData.cover// 封面
                         // thumbnails: this.$store.state.video.pic,   // 缩略图
                     },
                 })
@@ -53,7 +50,7 @@
     /*播放器大小设置*/
     #dplayer {
         margin-top: 1em;
-        height: 35vh;
+        /*height: 35vh;*/
 
     }
 </style>

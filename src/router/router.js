@@ -5,7 +5,7 @@ Vue.use(Router)
 // 基础视图
 const Homepage = () => import('../views/Home_page/Home_page.vue')
 const popular = () => import('../views/Category/Fire.vue')
-const video = () => import('../views/video/video.vue')
+const video = () => import('../views/video/video-play.vue')
 const mine = () => import('../views/Mine/mine.vue')
 const login = () => import('../views/login/Login.vue')
 const register = () => import('../views/register/Register.vue')
@@ -83,7 +83,7 @@ const router = new Router({
         },
         {
             path: '/mine',
-            name: 'mine',
+            name: 'MMM',
             component: mine,
             children: []
         },
