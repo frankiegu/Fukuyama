@@ -6,7 +6,7 @@
             <video_cover slot="thumb" :src="this.DetailsPageList.cover"></video_cover>
 
             <div slot="desc">
-                <p>分类：日本动漫 2013</p>
+                <p>分类：{{this.DetailsPageList.type | typefilter}}</p>
                 <p>主演：</p>
                 <p>导演：</p>
                 <p>状态：</p>
@@ -24,20 +24,8 @@
 
         <van-collapse v-model="activeNames">
             <van-collapse-item title="在线观看" name="2">
-
-                <!--                剧集格子-->
-                <van-grid
-                        :border="false" :column-num="3">
-                    <van-grid-item
-                            v-for="value in EpisodesList"
-                            :key="value.id"
-                            :to="SplicingUrl(value.episode_num)"
-                    >
-                        <van-button size="small" slot="default" color="hotpink" type="primary">{{value.name}}
-                        </van-button>
-                    </van-grid-item>
-                </van-grid>
-
+                <!--剧集格子-->
+                <grid :EpisodesList="EpisodesList"></grid>
 
             </van-collapse-item>
         </van-collapse>
@@ -49,9 +37,16 @@
 <script>
     import {Cinema} from "../../network/video_api";
     import video_cover from '../../components/common/video/video-cover'
+    import grid from './video-grid'
 
     export default {
         name: "video-details",
+        filters: {
+            typefilter(list) {
+                var ret = list.join(' | ')
+                return ret
+            }
+        },
         data() {
             return {
                 activeNames: ['1', '2'],
@@ -68,13 +63,9 @@
             this.GetEpisodesList()
         },
         components: {
-            video_cover
+            video_cover, grid
         },
         methods: {
-            // 给格子拼接url
-            SplicingUrl(id) {
-                return '/video' + '/' + this.id + '/' + id
-            },
 
             // 获取视频详细数据
             GetVideoCardInfo() {

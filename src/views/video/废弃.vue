@@ -39,7 +39,7 @@
     import author_avatar from "../../components/common/video/author_avatar";
     import rewards from "./rewards";
     import brief from "./brief";
-    import autovideo from "./autovideo";
+    import autovideo from "./video-play-playinfo";
 
     export default {
         name: "actionbar",
