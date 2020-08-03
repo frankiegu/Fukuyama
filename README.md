@@ -14,13 +14,13 @@ api地址：	 http://api.bwijn.xyz/
 
 - 推荐页
 
-  ![1](.\src\assets\首页.png)
+  ![1](/src/assets/首页.png)
 
 - 个人页 
 
   
   
-  ![](src\assets\个人页.jpg)
+  ![](/src/assets/个人页.jpg)
 
 ## 项目概要
 
