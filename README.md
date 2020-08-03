@@ -13,7 +13,7 @@ api地址：	 http://api.bwijn.xyz/
 ## 项目展示
 
 
-![推荐页](src\assets\首页.png)
+![推荐页](https://github.com/Bwijn/Youtuba-front-mobile/blob/brace2/src/assets/%E9%A6%96%E9%A1%B5.png)
 
 
 ![个人页 ](src\assets\个人页.jpg)
