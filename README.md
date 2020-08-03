@@ -14,7 +14,7 @@ api地址：	 http://api.bwijn.xyz/
 
 - 推荐页
 
-  ![1](/src/assets/首页.png)
+  ![1](./src/assets/首页.png)
 
 - 个人页 
 
