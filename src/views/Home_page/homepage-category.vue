@@ -1,13 +1,13 @@
 <template>
     <div>
-        <van-cell title="热门推荐" value="今日更新 33 条数据"/>
+        <van-cell title="热门推荐" />
 
 
         <category_anime :content="'hot'"></category_anime>
 
-        <van-cell title="日漫" value="今日更新 33 条数据"/>
+        <van-cell title="动漫" />
         <category_anime :content="'anime'"></category_anime>
-        <van-cell title="日剧" value="今日更新 33 条数据"/>
+        <van-cell title="日剧" />
         <category_anime :content="'JapaneseTV'"></category_anime>
 
     </div>

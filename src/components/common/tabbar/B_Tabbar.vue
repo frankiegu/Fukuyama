@@ -15,7 +15,7 @@
             </van-tabbar-item>
             <van-tabbar-item
                     replace
-                    to="/popular/TV"
+                    to="/popular"
                     icon="wap-nav"
             >片单
             </van-tabbar-item>
@@ -25,7 +25,7 @@
                     to="/account/func"
                     icon="friends"
             >
-个人
+                个人
             </van-tabbar-item>
             <van-tabbar-item
                     push

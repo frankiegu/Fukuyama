@@ -21,13 +21,14 @@
 
     export default {
         name: "category-anime",
-        props: ['content'],
+        props: ['content', 'sort'],
         data() {
             return {
-                anime_video_list: [1, 2, 3],
+                anime_video_list: [],
                 currentPage: 1,
-                a: 'api/ranking?category=日本动漫&sort=hot',
-                b: 'api/ranking?category=日本动漫&sort=time',
+
+                ahot: 'api/ranking?category=日本动漫&sort=hot',
+                atime: 'api/ranking?category=日本动漫&sort=time',
                 cc: 'api/ranking?category=日剧',
                 hot: 'api/recommend'    //首页热门推荐
 
@@ -35,43 +36,26 @@
         },
 
         mounted() {
-            // 在首页时
-            var r = this.$route.name;
-            var c = this.content;
 
-            switch (r) {
-                case 'hot':
-                    console.log(c);
-                    Cinema.GetAnimeList(this.a).then(r => {
-                        this.anime_video_list = r.data
-                    })
-                    break;
-                case 'time':
-                    console.log(c);
-                    Cinema.GetAnimeList(this.b).then(r => {
-                        this.anime_video_list = r.data
-                    })
-                    break;
-            }
-            switch (c) {
+            switch (this.content) {
                 // 日剧
                 case 'JapaneseTV':
-                    console.log(c);
+                    console.log(this.content);
                     Cinema.GetAnimeList(this.cc).then(r => {
                         this.anime_video_list = r.data
                     })
                     break;
-                // 日漫
+                // 动漫
                 case'anime':
-                    console.log(c);
-                    Cinema.GetAnimeList(this.a).then(r => {
+                    console.log(this.content);
+                    Cinema.GetAnimeList(this.ahot).then(r => {
                         this.anime_video_list = r.data
                     })
                     break;
 
                 // 热门推荐
                 case'hot':
-                    console.log(c);
+                    console.log(this.content);
                     Cinema.GetAnimeList(this.hot).then(r => {
                         this.anime_video_list = r.data
                     })
@@ -88,17 +72,13 @@
         },
         watch: {
             // 监听根据什么排序
-            '$route': function (to, from) {
-                if (to.name === 'hot') {
-                    Cinema.GetAnimeList(this.a).then(r => {
-                        this.anime_video_list = r.data
-                    })
-                } else if (to.name === 'time') {
-                    Cinema.GetAnimeList(this.b).then(r => {
-                        this.anime_video_list = r.data
-                    })
-                }
+            sort: function (val, oldVal) {
+                console.log(val, oldVal, this.sort)
+                this.anime_video_list.reverse()
+                if (val === 'time') {
 
+
+                }
             }
         },
         components: {video_cover},
