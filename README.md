@@ -1,14 +1,9 @@
 # Youtuba
-
-项目地址 ：  http://www.bwijn.xyz/ 
-
-api地址：	 http://api.bwijn.xyz/ 
-
 一个仿youtube的移动端app 基于vue2.x + django rest framework  rest framework-JWT 开发
 
-(主题已改为粉色 仿某哔哩     油管和某哩的混合体    (逃  )
+(主题已改为粉色 仿某哔哩     油管和某哩的混合体    (逃
 
-##### 文档由易文档托管  多人开发协作 方便后期维护  https://easydoc.xyz/#/ 
+##### 文档托管   https://easydoc.xyz/#/ 
 
 ## 项目展示
 
@@ -25,18 +20,6 @@ api地址：	 http://api.bwijn.xyz/
 - 项目初衷 用来看一些仅限港澳台地区的 [动漫] [ACG] [Cover]  
 - 本项目用到的技术栈： vue-cli + vue-router + vuex + axios + vue-axios + vant( UI ) 
 
-## 主要功能
-
-1. 登录，
-2. 注册
-3. 账号个人中心
-4. 保持登录状态 		
-5. 多少天免登陆
-6. 用户背景板
-7. 渲染视频列表
-8. 视频下方评论     
-9. 第三方登录
-10. 按赞
 
 ### 实现主流开发风格
 
