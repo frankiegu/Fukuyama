@@ -39,13 +39,9 @@
 12. 生产环境优化
 
 ###### 后端
+实现了restful风格
+[restful]( https://baike.baidu.com/item/RESTful/4406165?fr=aladdin )
 
-1. [restful风格]( https://baike.baidu.com/item/RESTful/4406165?fr=aladdin )
-
-### 待开发
-
-1. 二级分类
-2. 按赞视频保存 
 
 ### setup
 
