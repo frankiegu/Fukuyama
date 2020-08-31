@@ -1,7 +1,8 @@
-# Youtuba
+# Fukuyama
+
 一个仿youtube的移动端app 基于vue2.x + django rest framework  rest framework-JWT 开发
 
-(主题已改为粉色 仿某哔哩     油管和某哩的混合体    (逃
+主题为粉色 油管和某哔哩的混合体    (逃 :P
 
 ##### 文档托管   https://easydoc.xyz/#/ 
 
